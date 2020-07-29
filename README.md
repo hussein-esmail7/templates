@@ -7,3 +7,6 @@ This file asks for input infinite amount of times until the user types one of th
 
 # send_mail.py
 This program is a template if someone wants to send an email through a program. You would hust have to replace the input variables.
+
+# selenium_template.py
+This program is a template for interacting with websites using selenium. This also has the capability of running the programs in the background so you don't have to see the webpages as it runs.

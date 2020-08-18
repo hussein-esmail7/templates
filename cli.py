@@ -13,7 +13,7 @@ def main():
     # VARIABLES
     user_args = sys.argv
     str_invalid = "Invalid command!"
-    exit_commands = ["exit", "exit()", "quit"] # If the user types any of these, quit the program
+    exit_commands = ["exit", "exit()", "e", "quit", "quit()", "q"] # If the user types any of these, quit the program
     
     # Startup code goes here
     

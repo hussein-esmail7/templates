@@ -3,7 +3,7 @@
 CLI Interface Template
 Author: Hussein Esmail
 Date Created: 2020 07 22
-Cate Updated: 2020 07 22
+Date Updated: 2020 07 22
 Description: This program is a skeleton template for an infinite-input program
 """
 

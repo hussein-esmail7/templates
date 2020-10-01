@@ -5,15 +5,19 @@ from selenium.webdriver.chrome.options import Options  # Used to add aditional s
 # from selenium.webdriver.common.keys import Keys  # Used for pressing special keys, like 'enter'
 import sys # To exit the program
 
+bool_use_Brave = True
 bool_run_in_background = True
-chromedriver_path = "/Users/hussein/Downloads/"
+chromedriver_path = "/Users/hussein/Downloads/chromedriver"
 target_site = "https://google.com"
 
-options = Options()
+options = Options()  
 if bool_run_in_background:
     options.add_argument("--headless")  # Adds the argument that hides the window
-
-driver = webdriver.Chrome(chromedriver_path + "chromedriver", options=options)
+if bool_use_Brave:
+    options.binary_location = "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+    driver = webdriver.Chrome(options=options)
+else:
+    driver = webdriver.Chrome(chromedriver_path, options=options)
 driver.get(target_site)
 
 # ADDITIONAL CODE HERE

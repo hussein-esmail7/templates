@@ -1,7 +1,7 @@
-/** Java CLI Template Program
+/* Java CLI Template Program
  * @author Hussein Esmail
  * Created: 2020 08 28
- * Updated: 2020 08 28
+ * Updated: 2020 10 16
  * Description: This program is a skeleton template for an infinite-input program
  */
 
@@ -16,39 +16,40 @@ public class cli {
 	/**
 	 * @param args
 	 */
-	String str_intro = "Opendir program";
-	final static String COMMAND_EXIT = "exit";
-	final static String COMMAND_HELP = "help";
-	static String str_input = "> ";
-	static String str_split = " ";
-	static String str_invalid_command = "Invalid command!";
-	static String str_help = "CLI Template program"
-			+ "\n" + command_exit
+	final static String COMMAND_EXIT = "exit";                                              // This is the command to exit the program
+	final static String COMMAND_HELP = "help";                                              // This is the command to get to the help message
+	final static String STR_INTRO = "CLI Template Program";                                 // This is printed at the beginning of every program run
+	final static String STR_INPUT = "> ";                                                   // This is the input character each time they are able to type a new command
+	final static String STR_INVALID = "Invalid command!";                                   // This is printed when the user types something that the program does not recignize 
+	final static String STR_PROGRAM_EXITED = "Program exited.";
+	final static String STR_HELP = "===== CLI Template program ====="
+			+ "\n" + COMMAND_EXIT
 			+ "\n\tExit the program."
-			+ "\n" + command_help
-			+ "\n\tHelp command (this one).";
-	
-	
+			+ "\n" + COMMAND_HELP
+            + "\n\tHelp command (this one)."
+            + "\n===== CLI Template program =====";
 	
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in); // Create a Scanner object
-		while (true) { // Keep asking for commands until 
-			System.out.print(str_input); // Input character
-		    String[] user_input_unformatted = scanner.nextLine().split(str_split);  // Read user input
-		    List<String> user_input = Arrays.asList(user_input_unformatted);
-	    	System.out.println(user_input.size());
-		    if (user_input.size() == 1 && user_input[0].equals(COMMAND_EXIT)) { // Exit the program
-	    		scanner.close();
-	    	    System.exit(0);
-	    	} else if (user_input.size() == 1 && user_input.contains(COMMAND_HELP)) {
-	    		System.out.println(str_help);
-	    		// More commands below here but above the else{} statement
-	    	} else {
-	    		if (!user_input.get(0).equals("")) { // If the first entry is not an empty string
-	    			System.out.println(str_invalid_command);
-	    		} // Else: Do nothing
-	    	}
-		}
+		System.out.println(STR_INTRO);
+		while (true) {                                                                      // Keep asking for commands until 
+			String[] user_input = input(STR_INPUT).split(" ");				                // Ask for the user input and split it into a String[]
+            if (user_input.length == 1 && user_input[0].equals(COMMAND_EXIT)) {             // If the user types the exit command
+                System.out.println(STR_PROGRAM_EXITED);
+                System.exit(0);                                                             // Exit the program
+            } else if (user_input.length == 1 && user_input[0].contains(COMMAND_HELP)) {    // If the user types the help command
+                System.out.println(STR_HELP);                                               // Print the help message
+            } else {                                                                        // More commands can be put above here
+                if (!user_input[0].equals("") && user_input.length != 1) {                  // If the first entry is not an empty string
+                    System.out.println(STR_INVALID);                                        // Print that the most recent command was invalid
+                }                                                                           // Else: Do nothing, go to the next input line
+            }
+	}
+    }
+    
+    public static String input(String ask) {
+	    Scanner scanner = new Scanner(System.in);  							                // Create a Scanner object
+	    System.out.print(ask);												                // Print the string before input (most cases "> ")
+	    return scanner.nextLine();  										                // Return the user input
 	}
 
 }

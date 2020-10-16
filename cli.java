@@ -11,14 +11,14 @@ import java.util.Scanner; // Import the Scanner class for user input
 
 import java.util.List;
 
-public class opendir {
+public class cli {
 
 	/**
 	 * @param args
 	 */
 	String str_intro = "Opendir program";
-	static String command_exit = "exit";
-	static String command_help = "help";
+	final static String COMMAND_EXIT = "exit";
+	final static String COMMAND_HELP = "help";
 	static String str_input = "> ";
 	static String str_split = " ";
 	static String str_invalid_command = "Invalid command!";
@@ -37,10 +37,10 @@ public class opendir {
 		    String[] user_input_unformatted = scanner.nextLine().split(str_split);  // Read user input
 		    List<String> user_input = Arrays.asList(user_input_unformatted);
 	    	System.out.println(user_input.size());
-		    if (user_input.size() == 1 && user_input.contains(command_exit)) { // Exit the program
+		    if (user_input.size() == 1 && user_input[0].equals(COMMAND_EXIT)) { // Exit the program
 	    		scanner.close();
 	    	    System.exit(0);
-	    	} else if (user_input.size() == 1 && user_input.contains(command_help)) {
+	    	} else if (user_input.size() == 1 && user_input.contains(COMMAND_HELP)) {
 	    		System.out.println(str_help);
 	    		// More commands below here but above the else{} statement
 	    	} else {

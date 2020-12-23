@@ -1,0 +1,40 @@
+
+\documentclass[article,oneside]{memoir}
+% This command goes at the beginning of every document
+% [oneside,article] are two of many options that can be chosen
+%   oneside makes each page have the same layout, for printing on only one side 
+%     of the paper (change it to twoside to see the difference)
+%   article means we're writing a short document only and won't be using special 
+%     chapter headings
+%   a4paper changes the page dimensions for A4 sized paper 
+
+\usepackage[colorlinks=true,linkcolor=red]{hyperref} % Hyperlink capabilities
+\usepackage{pdfsync}
+% This package is used to tell TeXShop where things are in the PDF file.
+% Command-click at any spot in the PDF and it will jump to the corresponding
+% location in the source file.
+
+% Define the title, author and date of the document.
+% If the date is undefined, the current date is substituted.
+\title {\LaTeX\ Template Document}
+\author{Hussein Esmail}
+\date{2020-12-23}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Intro}
+
+There's some text here in the form of a paragraph.
+
+\section{Subsection}
+This is section 1.1 titled "Subsection". More subsections can be placed after this.
+
+\chapter{External Sources}
+\section{URLs}
+You can have a URL hyperlink of the hypreref library is installed. \href{https://google.com}{Google}.
+\section{Images}
+Please use \href{https://google.com}{Google} to add images because it depends on the operating system you are using and the path of the image.
+
+\end{document}

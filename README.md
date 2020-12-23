@@ -8,6 +8,9 @@ These files asks for input infinite amount of times until the user types one of 
 ## template.cpp, template.tex
 These files are basic boilerplate files for the C++ programming language and LaTeX so you can get working on the important stuff faster.
 
+## QR.py
+This program converts given text or clipboard to a QR code then opens the image in the default image viewer regardless of your operating system.
+    
 ## selenium_template.py
 This program is a template for interacting with websites using selenium. This also has the capability of running the programs in the background so you don't have to see the webpages as it runs.
 

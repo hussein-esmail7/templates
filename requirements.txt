@@ -1,0 +1,8 @@
+imghdr
+pyqrcode
+pyperclip
+smtplib
+ssl
+getpass
+selenium
+pytesseract

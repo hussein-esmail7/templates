@@ -13,7 +13,6 @@ import pyqrcode         # Used to generate QR Code
 import pyperclip        # Used to get clipboard if user wants to convert the clipboard
 import sys              # Used to exit the program and get the playform type
 import subprocess       # Used to run terminal commands to open the generated image
-import os
 
 def main():
     # os.chdir("~/Downloads")

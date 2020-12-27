@@ -11,7 +11,6 @@ Description: This program is a template if someone wants to send an email
 import smtplib
 import ssl
 import getpass
-import sys
 
 try:
     port = 587  # For starttls

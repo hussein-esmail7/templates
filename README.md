@@ -2,8 +2,14 @@
 
 Hello! This repository is mainly for myself for files I might need time and time again. Though it is fine for you to use. If you have anything you think you can contribute, please help my code be better!
 
+## requirements.txt
+This file is all the requirements for all of the python files here. To use this file, download it and run 'pip3 install requirements.txt' in the same directory as the file, and you should have no ModuleNotFoundError issues.
+
 ## cli.py, cli.java
 These files asks for input infinite amount of times until the user types one of the exit commands ("exit", "q", "quit", etc.) (the .java file currently only supports "exit"). This is mainly used for interface programs, that would take many commands within the program. 
+
+## password_generator.py
+This program generates a random password that can be used when creating internet accounts. If a number is typed along with the 'python3 password_generator.py', it will make a password of that length. For example: 'python3 password_generator.py 10'.
 
 ## template.cpp, template.tex
 These files are basic boilerplate files for C++ and LaTeX (a typesetting system) so you can get working on the important stuff faster.
@@ -16,3 +22,6 @@ This program is a template for interacting with websites using selenium. This al
 
 ## send_mail.py
 This program is a template if someone wants to send an email through a program. You would just have to replace the input variables.
+
+## voice.py
+This program says whatever is inputed in its arguments via the terminal 'say' command.

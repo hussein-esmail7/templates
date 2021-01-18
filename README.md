@@ -5,6 +5,9 @@ Hello! This repository is mainly for myself for files I might need time and time
 ## requirements.txt
 This file is all the requirements for all of the python files here. To use this file, download it and run 'pip3 install requirements.txt' in the same directory as the file, and you should have no ModuleNotFoundError issues.
 
+## base64convert.py
+This file converts a base64 text to a text readable by the user (either by typing it in the arguments of the file or in its input field). If it is a URL, it will open it in the default browser.
+
 ## cli.py, cli.java
 These files asks for input infinite amount of times until the user types one of the exit commands ("exit", "q", "quit", etc.) (the .java file currently only supports "exit"). This is mainly used for interface programs, that would take many commands within the program. 
 
@@ -25,3 +28,6 @@ This program is a template if someone wants to send an email through a program. 
 
 ## voice.py
 This program says whatever is inputed in its arguments via the terminal 'say' command.
+
+## vtt.py
+This program inputs a .vtt subtitle file, and asks for a time delay: HH:MM:SS:MS and outputs a new .vtt file with the time delay factored into every line.

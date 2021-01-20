@@ -2,18 +2,23 @@
 Hello! This repository is mainly for myself for files I might need time and time again. Though it is fine for you to use. If you have anything you think you can contribute, please help my code be better!
 
 # Table of contents
-[Table of Contents](#table-of-contents)
-[File Descriptions](#File-Descriptions)
-    [Requirements (txt)](##requirements.txt)
-    [Base64 Converter (py)](##base64convert.py)
-    [CLI Templates (py, Java)](##cli.py,-cli.java)
-    [Password Generator (py)](##password_generator.py)
-    [Template programs (C++, LaTeX)](##template.cpp,-template.tex)
-    [QR Code Generator (py)](##QR.py)
-    [Selenium Template (py)](##selenium_template.py)
-    [Automated Email (py)](##send_mail.py)
-    [Say Text Aloud (py)](##voice.py)
-    [.vtt Subtitle Time Editor (py)](##vtt.py)
+<ol>
+<li>[Table of Contents](#table-of-contents)</li>
+<li>[File Descriptions](#File-Descriptions)
+    <ol>
+    <li>[Requirements (txt)](##requirements.txt)</li>
+    <li>[Base64 Converter (py)](##base64convert.py)</li>
+    <li>[CLI Templates (py, Java)](##cli.py,-cli.java)</li>
+    <li>[Password Generator (py)](##password_generator.py)</li>
+    <li>[Template programs (C++, LaTeX)](##template.cpp,-template.tex)</li>
+    <li>[QR Code Generator (py)](##QR.py)</li>
+    <li>[Selenium Template (py)](##selenium_template.py)</li>
+    <li>[Automated Email (py)](##send_mail.py)</li>
+    <li>[Say Text Aloud (py)](##voice.py)</li>
+    <li>[.vtt Subtitle Time Editor (py)](##vtt.py)</li>
+    </ol>
+</li>
+</ol>
 
 # File Descriptions
 ## requirements.txt

@@ -1,7 +1,21 @@
 # Templates
-
 Hello! This repository is mainly for myself for files I might need time and time again. Though it is fine for you to use. If you have anything you think you can contribute, please help my code be better!
 
+# Table of contents
+[Table of Contents](#table-of-contents)
+[File Descriptions](#File-Descriptions)
+    [Requirements (txt)](##requirements.txt)
+    [Base64 Converter (py)](##base64convert.py)
+    [CLI Templates (py, Java)](##cli.py,-cli.java)
+    [Password Generator (py)](##password_generator.py)
+    [Template programs (C++, LaTeX)](##template.cpp,-template.tex)
+    [QR Code Generator (py)](##QR.py)
+    [Selenium Template (py)](##selenium_template.py)
+    [Automated Email (py)](##send_mail.py)
+    [Say Text Aloud (py)](##voice.py)
+    [.vtt Subtitle Time Editor (py)](##vtt.py)
+
+# File Descriptions
 ## requirements.txt
 This file is all the requirements for all of the python files here. To use this file, download it and run 'pip3 install requirements.txt' in the same directory as the file, and you should have no ModuleNotFoundError issues.
 

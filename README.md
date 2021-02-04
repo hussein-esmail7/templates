@@ -8,7 +8,7 @@ Hello! This repository is mainly for myself for files I might need time and time
     - [Base64 Converter (py)](##base64convert.py)
     - [CLI Templates (py, Java)](##cli.py,-cli.java)
     - [Password Generator (py)](##password_generator.py)
-    - [Template programs (C++, LaTeX)](##template.cpp,-template.tex)
+    - [Template programs (C, C++, LaTeX)](##template.cpp,-template.tex)
     - [QR Code Generator (py)](##QR.py)
     - [Selenium Template (py)](##selenium_template.py)
     - [Automated Email (py)](##send_mail.py)
@@ -28,8 +28,8 @@ These files asks for input infinite amount of times until the user types one of 
 ## password_generator.py
 This program generates a random password that can be used when creating internet accounts. If a number is typed along with the 'python3 password_generator.py', it will make a password of that length. For example: 'python3 password_generator.py 10'.
 
-## template.cpp, template.tex
-These files are basic boilerplate files for C++ and LaTeX (a typesetting system) so you can get working on the important stuff faster.
+## template.c, template.cpp, template.tex
+These files are basic boilerplate files for C, C++ and LaTeX (a typesetting system) so you can get working on the important stuff faster.
 
 ## QR.py
 This program converts given text or clipboard to a QR code then opens the image in the default image viewer regardless of your operating system.

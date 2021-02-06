@@ -2,13 +2,17 @@
 .vtt Subtitle File Time-shift Conversion Program
 Hussein Esmail
 Created: 2021 01 12
-Updated: 2021 01 12
+Updated: 2021 02 05
 Description: This program inputs a .vtt subtitle file, 
     and asks for a time delay: HH:MM:SS:MS and outputs
     a new .vtt file with the time delay factored into every line.
 """
 
 import os, sys, re
+
+def conv_int_single_digit(item):
+    if int(item) < 10:
+        return str(int(item))
 
 def check_int(sentence):
     while True:
@@ -44,10 +48,21 @@ def check_None(var):
         return var
 
 def main():
-    os.chdir("/Users/hussein/Downloads/vtt")
+    while True:
+        file_directory = input("Please input the directory the subtitle files are in: ")
+        try:
+            os.chdir(file_directory)
+            break
+        except:
+            print("Not a valid directory. Please enter again.")
     files = sorted(os.listdir())
     separator = "==============="
-    regex_pattern = "[0-9][0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9] --> [0-9][0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9]"
+    if file_type == "vtt":
+        regex_pattern = "[0-9][0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9] --> [0-9][0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9]"
+    elif file_type == "sbv":
+        regex_pattern = "[0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9],[0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9]"
+    else:
+        regex_pattern = ""
     bool_print_lines = False
     bool_output_file = True
     input_lines = []
@@ -57,6 +72,7 @@ def main():
         print(f"{i+1}. {files[i]}")
     input_file_num = check_int("What is the number of the input file: ")
     print(separator)
+    file_type = files[input_file_num-1].split(".")[-1]
     with open(files[input_file_num-1], "r") as f:
         input_lines = "".join(f.readlines()).split("\n")
     if len(input_lines) == 0:
@@ -96,7 +112,10 @@ def main():
             end_times[2] = conv_int_str(int(end_times[2]) + int(shift_sec), 2)          # End sec shift
             start_times[3] = conv_int_str(int(start_times[3]) + int(shift_ms), 3)       # Start ms shift
             end_times[3] = conv_int_str(int(end_times[3]) + int(shift_ms), 3)           # End ms shift
-            line_edited = start_times[0] + ":" + start_times[1] + ":" + start_times[2] + "." + start_times[3] + " --> " + end_times[0] + ":" + end_times[1] + ":" + end_times[2] + "." + end_times[3]
+            if file_type == "vtt":
+                line_edited = start_times[0] + ":" + start_times[1] + ":" + start_times[2] + "." + start_times[3] + " --> " + end_times[0] + ":" + end_times[1] + ":" + end_times[2] + "." + end_times[3]
+            elif file_type == "sbv":
+                line_edited = conv_int_single_digit(start_times[0]) + ":" + start_times[1] + ":" + start_times[2] + "." + start_times[3] + "," + conv_int_single_digit(end_times[0]) + ":" + end_times[1] + ":" + end_times[2] + "." + end_times[3]
         output_lines.append(line_edited)
         if bool_print_lines:
             print(line_edited)                                                          # So the user can copy the output to a new file

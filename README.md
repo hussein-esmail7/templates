@@ -3,6 +3,7 @@ Hello! This repository is mainly for myself for files I might need time and time
 
 # Table of contents
 - [Table of Contents](#table-of-contents)
+- [Installation](#installation)
 - [File Descriptions](#File-Descriptions)
     - [Requirements (txt)](##requirements.txt)
     - [Base64 Converter (py)](##base64convert.py)
@@ -14,6 +15,20 @@ Hello! This repository is mainly for myself for files I might need time and time
     - [Automated Email (py)](##send_mail.py)
     - [Say Text Aloud (py)](##voice.py)
     - [.vtt Subtitle Time Editor (py)](##vtt.py)
+    
+# Installation
+Copy and paste this command to download this repository after you've changed directories to the folder you want.
+```
+git clone https://github.com/hussein-esmail7/templates
+```
+Then change directories into that folder.
+```
+cd templates
+```
+If you want to run one of the python files and have python3 installed, you can install the required libraries via pip:
+```
+pip install requirements.txt
+```
 
 # File Descriptions
 ## requirements.txt

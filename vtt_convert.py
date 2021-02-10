@@ -2,7 +2,7 @@
 .vtt Subtitle File Time-shift Conversion Program
 Hussein Esmail
 Created: 2021 01 12
-Updated: 2021 01 12
+Updated: 2021 02 05
 Description: This program inputs a .vtt subtitle file, 
     and asks for a time delay: HH:MM:SS:MS and outputs
     a new .vtt file with the time delay factored into every line.

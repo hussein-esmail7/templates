@@ -9,7 +9,8 @@ Hello! This repository is mainly for myself for files I might need time and time
     - [Base64 Converter (py)](##base64convert.py)
     - [CLI Templates (py, Java)](##cli.py,-cli.java)
     - [Password Generator (py)](##password_generator.py)
-    - [Template programs (C, C++, LaTeX)](##template.cpp,-template.tex)
+    - [Template Generator Program (sh)](##template.sh)
+    - [Template programs (LaTeX)](##template.tex)
     - [QR Code Generator (py)](##QR.py)
     - [Selenium Template (py)](##selenium_template.py)
     - [Automated Email (py)](##send_mail.py)
@@ -43,7 +44,10 @@ These files asks for input infinite amount of times until the user types one of 
 ## password_generator.py
 This program generates a random password that can be used when creating internet accounts. If a number is typed along with the 'python3 password_generator.py', it will make a password of that length. For example: 'python3 password_generator.py 10'.
 
-## template.c, template.cpp, template.tex
+## template.sh
+This program is not just a simple template shell script. This program lets you choose what file type you want generated and makes that template file. The current options are .c (C), .cpp (C++), .css (CSS), .html (HTML), .java (Java), .ms (Groff), .py (Python), .sh (Bash)
+
+## template.tex
 These files are basic boilerplate files for C, C++ and LaTeX (a typesetting system) so you can get working on the important stuff faster.
 
 ## QR.py

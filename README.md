@@ -10,7 +10,7 @@ Hello! This repository is mainly for myself for files I might need time and time
     - [CLI Templates (py, Java)](##cli.py,-cli.java)
     - [Password Generator (py)](##password_generator.py)
     - [Template Generator Program (sh)](##template.sh)
-    - [Template programs (LaTeX)](##template.tex)
+    - [Template files (LaTeX)](##template-files)
     - [QR Code Generator (py)](##QR.py)
     - [Selenium Template (py)](##selenium_template.py)
     - [Automated Email (py)](##send_mail.py)
@@ -47,7 +47,8 @@ This program generates a random password that can be used when creating internet
 ## template.sh
 This program is not just a simple template shell script. This program lets you choose what file type you want generated and makes that template file. The current options are .c (C), .cpp (C++), .css (CSS), .html (HTML), .java (Java), .ms (Groff), .py (Python), .sh (Bash)
 
-## template.tex
+## Template Files
+### template.tex
 These files are basic boilerplate files for C, C++ and LaTeX (a typesetting system) so you can get working on the important stuff faster.
 
 ## QR.py

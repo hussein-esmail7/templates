@@ -16,6 +16,7 @@ Hello! This repository is mainly for myself for files I might need time and time
     - [Automated Email (py)](##send_mail.py)
     - [Say Text Aloud (py)](##voice.py)
     - [.vtt Subtitle Time Editor (py)](##vtt.py)
+- [Donate](#donate)
     
 # Installation
 Copy and paste this command to download this repository after you've changed directories to the folder you want.
@@ -65,3 +66,6 @@ This program says whatever is inputed in its arguments via the terminal 'say' co
 
 ## vtt.py
 This program inputs a .vtt subtitle file, and asks for a time delay: HH:MM:SS:MS and outputs a new .vtt file with the time delay factored into every line.
+
+## Donate
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/husseinesmail)

@@ -1,0 +1,92 @@
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% Description of THIS file: This is a LaTeX template document for my own course notes at University.
+
+% =========================== Variables ===========================
+\newcommand{\myAuthor}{Hussein Esmail}      % Author of the show
+\newcommand{\mySubject}{PDF Subject Here}   % Used for Metadata
+\newcommand{\myKeywords}{PDF Keywords Here} % Separated by comma
+\newcommand{\myCourseDateCreated}{Created Date Here}
+\newcommand{\myCourseDateUpdated}{\today}
+\newcommand{\myCourseCredits}{Num of Credits of Course}
+\newcommand{\myCourseCode}{Course Code Here}
+\newcommand{\myCourseTitle}{Course Title here}
+\newcommand{\myCourseProf}{Course Prof Here}    % First Last only
+\newcommand{\myCourseSemester}{Year and season here} % Ex. 2019F 
+\newcommand{\myCourseSchedule}{Weekdays/Times of Day Here} % Ex. MWF 9:00
+\newcommand{\myCourseSection}{Section Here} % Single letter
+\newcommand{\myTitle}{\myCourseCode \myCourseCredits: \myCourseTitle \\ \myCourseSemester - \myCourseSchedule}
+% =========================== Variables ===========================
+
+% =========================== Shortcuts ===========================
+\newcommand{\comment}[1]{}                          % Multiline comments
+\newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
+% =========================== Shortcuts ===========================
+
+\documentclass{article}
+\title{\myTitle}
+\author{\myAuthor}
+\date{\myCourseDateUpdated} 
+
+\usepackage{hyperref}   % Used for adding PDF metadata
+\usepackage{listings}   % Used for blocks of code
+\usepackage{graphicx}
+
+\graphicspath{{./}}     % Import images that are in the same folder
+
+\hypersetup{
+    colorlinks=false, 
+    pdfborder={0 0 0},
+    pdftitle={\myTitle}, 
+    pdfauthor={\myAuthor}, 
+    pdfsubject={\mySubject}, % TODO 
+    pdfkeywords={\myKeywords}
+}
+
+\lstset{        % Coding block configuration
+  basicstyle=\ttfamily,
+  frame=single,
+  breaklines=true
+}
+\begin{document}        % Official beginning of the document. 
+\pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
+\maketitle              % Make title page
+\newpage                % Insert a page break
+\tableofcontents        % Makes TOC
+\newpage                % Insert a page break
+\pagenumbering{arabic}  % Brings the normal numbers back
+
+\section{Introduction}
+This PDF is the collection of my lecture notes for \myCourseCode{} that took place during the \myCourseSemester{} semester. This was taught by \myCourseProf{} for section \myCourseSection{}.
+
+% TODO: Lecture notes here
+
+
+\comment{   % Lecture template
+\section{Lecture: DATE}
+\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item NOTES HERE
+\end{itemize}
+}
+
+\comment{   % Tutorial template
+\section{Tutorial: DATE}
+\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item NOTES HERE
+\end{itemize}
+}   
+
+\comment{   % Lab template
+\section{Lab: DATE}
+\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
+    \item NOTES HERE
+\end{itemize}
+}   
+
+\end{document} % Official end of the document. 

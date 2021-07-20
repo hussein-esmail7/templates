@@ -1,0 +1,120 @@
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This file can be found at https://husseinesmail.com/guides/vcp/
+
+% Description of THIS file: This is a LaTeX (pronounced `Lah-tech') template document for a theatre performance script. I made this template for the following reasons:
+%   - If a recording of said show has to be captioned, it's faster to copy and paste from this file or the PDF it generates
+%   - If this is read on a computer screen, it has a navigable table of contents to get to scenes faster
+%   - If this is read on a computer screen, text is searchable compared to scans or a photocopy
+%   - If this is printed and in a duotang, you can be sure that no text will be hidden behind the binding (or no text is diagonal for that matter)
+
+% What is LaTeX? definition from https://www.latex-project.org/about
+% LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or «Bertolt Brecht»), is a document preparation system for high-quality typesetting. It is most often used for medium-to-large technical or scientific documents but it can be used for almost any form of publishing.
+
+% Why use LaTeX instead of Microsoft Word?
+% 1. You don't have to indent text manually, LaTeX can do it by itself when you tell it to.
+% 2. LaTeX doesn't require a Microsoft Office licence to use. It's free for everyone (and part of the Free Open Source Software movement)!
+% 3. If you have a table of contents with numbered sections and you add another one in the middle, everything is renumbered automatically (acts and scenes in this case).
+% 4. (The reason why it got me into it) It can be typed in any text editor (though I recommend using VSCode with the "LaTeX Workshop" extension by James Yu).
+
+% This document is formatted so that you can follow along with these comments (starting with a `%') so you know what's happening.
+
+% Here is the variables section where you can easily change what parameters are used (title, author, date typed/written, etc.)
+
+% =========================== Variables ===========================
+\newcommand{\myTitle}{Show Title Here}      % Title of show
+\newcommand{\myAuthor}{Author Here}         % Author of the show
+\newcommand{\mySubject}{PDF Subject Here}   % Used for Metadata
+\newcommand{\myKeywords}{PDF Keywords Here} % Separated by comma
+\newcommand{\myDate}{Created Date Here}     % Written or typed date
+% =========================== Variables ===========================
+
+% You don't need to worry about this ``Configurations'' section. This is where most of the variable values are actually implemented (setting the title, author, date typed/written, etc.)
+
+% ======================== Configurations ========================
+\documentclass{article}
+\usepackage{hyperref}       % Used for adding PDF metadata
+\usepackage{multirow}       % Multiple rows/columns in table
+\usepackage{longtable}      % Tables that can go past 1 page
+\usepackage{fancyhdr}       % Used for page numbers on RS
+\setlength\parindent{0pt}   % Paragraph indent to 0
+\pagestyle{fancy}           % Turn on the style
+\fancyhead{}                % Clear the header and footer
+\fancyfoot{}
+\fancyfoot[R]{\thepage}     % Set RS of footer to page num
+\title{\myTitle}            % Title  = stored variable
+\author{\myAuthor}          % Author = stored variable
+\date{\myDate}              % Date   = stored variable
+\hypersetup{colorlinks=false, pdfborder={0 0 0}, pdftitle={\myTitle}, pdfauthor={\myAuthor}, pdfsubject={\mySubject}, pdfkeywords={\myKeywords}}    % PDF metadata
+% ======================== Configurations ========================
+
+% These following commands are what you can use when typing lines so you don't need to know too much of how LaTeX works. If at any point you have questions about how to do something in LaTeX, please don't hesitate to email me at HusseinEsmailContact@gmail.com
+
+% Descriptions of these shortcuts:
+% \tab -> Used for stage directions for specific characters
+% \comment -> If you need to write a multi-line comment here
+% \newAct -> Ex. \newAct{Act Number}{Act Name}
+% \newScene -> Ex. \newScene{Scene Number}{Scene Name}
+% \newLine -> Each time a character has a line.
+%       Ex. \newLine{Character Name}{Character's line}
+% \newLineMC -> New line for multiple characters
+%       This is different than \newLine{}{} because the lines 
+%       come on the next line, or else the first column would be
+%       too wide.
+% \newStageDirection -> This is a stage direction 
+%       Multiple paragraphs require this command consecutively.
+% newStageDirectionDirected -> Stage direction for a specific person
+%       Ex. \newStageDirectionDirected{Character Name}{Direction}
+% \newPageDisplay -> Display "Page #" instead of actually creating
+%       a new page. This is used if you don't want page breaks. This
+%       will also show up on the Table of Contents
+
+% ======================= Shortcut Commands =======================
+\newcommand{\tab}[1][1cm]{\hspace*{#1}}
+\newcommand{\comment}[1]{}  % Multiline comments - does not show in PDF
+\newcommand{\newAct}[2]{\section*{Scene #1: #2} \addcontentsline{toc}{section}{\protect\numberline{}Act #1: #2}} % Act header
+\newcommand{\newScene}[2]{\subsection*{Scene #1: #2} \addcontentsline{toc}{subsection}{\protect\numberline{}Scene #1: #2}} % Scene with only number
+\newcommand{\newLine}[2]{\def\thisName{#1}\ifx\thisName\lastName\else\textbf{\uppercase{#1}}\fi\gdef\lastName{#1}&#2\\}
+\newcommand{\newLineMC}[2]{\multicolumn{2}{l}{\textbf{\uppercase{#1}}} \\ & #2 \\} % newLine for multiple characters
+\newcommand{\newStageDirection}[1]{& \textit{#1} \\ \\} % Stage direction
+\newcommand{\newPageDisplay}[1]{--- & \textbf{\textit{Page #1}} \addcontentsline{toc}{subsubsection}{\protect\numberline{}Page #1}\\}
+% ======================= Shortcut Commands =======================
+
+\begin{document}        % Official beginning of the document. 
+\pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
+\maketitle              % Make title page
+\newpage                % Insert a page break
+\tableofcontents        % Makes TOC
+\newpage                % Insert a page break
+\pagenumbering{arabic}  % Brings the normal numbers back
+
+% ============================ Example ============================
+\newScene{1}{}          % Scene 1 with its title
+\begin{longtable}{l p{\textwidth}}  % Table start
+    \newStageDirection{(This is a stage direction. It is not indented, so it is not directed towards anyone.)}
+    \newLine{Hussein}{This is my first line in the show.}
+    \newLine{Hussein}{This is my second line in the show.}
+    \newLine{Hussein}{\uppercase{This is my first yelling or singing line.}}
+    \newLine{Hussein}{\tab\textit{(Hussein sits. This is Hussein's stage direction.)}}
+    \newpage    % Page 2
+    \newLine{Hussein}{This is Hussein's first line on page 2. Oh, hi Mark.}
+    \newLineMC{Hussein, Mark}{This is the first line said in unison.}
+\end{longtable} % Table end
+% ============================ Example ============================
+
+% TODO: Here is where you would continue writing scenes and lines.
+
+% This commented block is a template scene you can copy to write lines quicker
+
+\comment{
+\newScene{SCENE NUMBER}{SCENE NAME}   % Scene _ with its title
+\begin{longtable}{l p{\textwidth}}    % Table start
+    LINES HERE
+\end{longtable}                       % Table end
+}
+
+\end{document} % Official end of the document. 

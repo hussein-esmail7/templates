@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <category term="[TERM]" label="[RSS FEED TITLE]"/>
+    <updated>[TIME UPDATED]</updated> <!-- Ex: 2021-05-03T15:05:35+00:00 -->
+    <!-- <icon></icon> -->
+    <!-- <id></id> -->
+    <link rel="self" href="[LINK TO THIS RSS]" type="application/atom+xml" />
+    <link rel="alternate" href="[LINK ALTERNATE]" type="text/html" />
+    <!-- <logo></logo> -->
+    <subtitle>[RSS DESCRIPTION]</subtitle>
+    <title>[RSS FEED TITLE]</title>
+    
+    <!-- Template:
+    <entry>
+        <title>TODO</title>
+        <published>[TIME CREATED]</published>
+        <updated>[TIME UPDATED]</updated>
+        <link href="[LINK TO THIS POST]"/>
+        <author>
+            <name>[AUTHOR]</name>
+        </author>
+        <category term="[TERM]" label="[RSS FEED TITLE]"/>
+        <content type="html">
+            [CONTENT]
+        </content>
+    </entry>
+    -->
+
+    <!-- FEEDS START -->
+	
+</feed>

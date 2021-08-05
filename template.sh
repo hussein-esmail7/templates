@@ -4,6 +4,9 @@
 # This program generates a template 
 # file for the chosen file type
 
+# This part is used for https://github.com/hussein-esmail7/template-maker
+# templateDescription: Bash Scripting Document
+
 # Make sure the bash version is compatible with this program
 case $BASH_VERSION in 
     ''|[0-3].*) echo "ERROR: Bash 4.0+ required" >&2; exit 1;; 

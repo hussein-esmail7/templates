@@ -1,43 +1,71 @@
-
-\documentclass[article,oneside]{memoir}
-% This command goes at the beginning of every document
-% [oneside,article] are two of many options that can be chosen
-%   oneside makes each page have the same layout, for printing on only one side 
-%     of the paper (change it to twoside to see the difference)
-%   article means we're writing a short document only and won't be using special 
-%     chapter headings
-%   a4paper changes the page dimensions for A4 sized paper 
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
 % templateDescription: Default LaTeX Template
 
-\usepackage[colorlinks=true,linkcolor=red]{hyperref} % Hyperlink capabilities
-\usepackage{pdfsync}
-% This package is used to tell TeXShop where things are in the PDF file.
-% Command-click at any spot in the PDF and it will jump to the corresponding
-% location in the source file.
+% This file can be found at https://github.com/hussein-esmail7/templates
 
-% Define the title, author and date of the document.
-% If the date is undefined, the current date is substituted.
-\title {\LaTeX\ Template Document}
-\author{Hussein Esmail}
-\date{2020-12-23}
+% =========================== Variables ===========================
+\newcommand{\myAuthor}              {[AUTHOR]} % Author of this file
+\newcommand{\mySubject}             {PDF Subject Here}  % Used for Metadata
+\newcommand{\myKeywords}            {PDF Keywords Here} % Separated by comma
+\newcommand{\myCourseDateCreated}   {[DATE]}
+\newcommand{\myCourseDateUpdated}   {\today}
+\newcommand{\myTitle}               {[FILENAME]}
+% =========================== Variables ===========================
 
-\begin{document}
+% =========================== Shortcuts ===========================
+\newcommand{\comment}[1]{}                          % Multiline comments
+\newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
+\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+% =========================== Shortcuts ===========================
 
-\maketitle
+\documentclass{article}
+\title{\myTitle}
+\author{\myAuthor}
+\date{\myCourseDateUpdated} 
 
-\chapter{Intro}
+\usepackage{hyperref}   % Used for adding PDF metadata
+\usepackage{listings}   % Used for blocks of code
+\usepackage{graphicx}   % Used for adding images
+\usepackage{listings}   % Used for blocks of code
 
-There's some text here in the form of a paragraph.
+\graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
-\section{Subsection}
-This is section 1.1 titled "Subsection". More subsections can be placed after this.
+\hypersetup{
+    colorlinks=false, 
+    pdfborder={0 0 0},
+    pdftitle={\myTitle}, 
+    pdfauthor={\myAuthor}, 
+    pdfsubject={\mySubject}, 
+    pdfkeywords={\myKeywords}
+}
 
-\chapter{External Sources}
-\section{URLs}
-You can have a URL hyperlink of the hypreref library is installed. \href{https://google.com}{Google}.
-\section{Images}
-Please use \href{https://google.com}{Google} to add images because it depends on the operating system you are using and the path of the image.
+\lstset{        % Coding block configuration
+  basicstyle=\ttfamily,
+  frame=single,
+  breaklines=true
+}
+
+\begin{document}        % Official beginning of the document. 
+% \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
+\maketitle              % Make title page
+\newpage                % Insert a page break
+\tableofcontents        % Makes TOC
+\newpage                % Insert a page break
+% \pagenumbering{arabic}  % Brings the normal numbers back
+
+\section{Introduction}
+% TODO: Purpose of this document here
+
+At the time of writing this document, all URLs in this document are correct. Should you have any issues, please \underline{\href{mailto:HusseinEsmailContact@gmail.com}{feel free to send me an email}}. You can access this PDF at \underline{\href{https://husseinesmail.xyz/guides/vcp/VCP-Lighting-Strand-550i-Guide.pdf}{https://husseinesmail.xyz/guides/vcp/VCP-Lighting-Strand-550i-Guide.pdf}}.
+
+\section{How This Guide is Formatted}
+This guide is made using \LaTeX{}, a typesetting document format, mainly used for large documents like STEM documents, theses, and research papers. To read more about what I think about \LaTeX{}, you \href{https://husseinesmail.xyz/articles/is-latex-better.html}{can go here}.
 
 \end{document}

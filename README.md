@@ -34,7 +34,7 @@ If you want to run one of the python files and have python3 installed, you can i
 
 # File Descriptions
 ## captions-template.tex
-Template document for Theatre Accessibility Performance Captions because typing the script in LaTeX is faster than centering text in PowerPoint in each slide. [A PDF example can be found here]().
+Template document for Theatre Accessibility Performance Captions because typing the script in LaTeX is faster than centering text in PowerPoint in each slide. [A PDF example can be found here](https://github.com/hussein-esmail7/templates/blob/master/LaTeX%20PDF%20Examples/Captions-Template.pdf).
 
 ## template.tex
 This file is a basic boilerplate file LaTeX (a typesetting system) so you can get working on the important stuff faster.
@@ -43,7 +43,7 @@ This file is a basic boilerplate file LaTeX (a typesetting system) so you can ge
 This file is written in LaTeX, and is meant to have all the lecture notes for a specific class during my time at university.
 
 ## script-template.tex
-Template document for a theatre performance script. [A PDF example can be found here]().
+Template document for a theatre performance script. [A PDF example can be found here](https://github.com/hussein-esmail7/templates/blob/master/LaTeX%20PDF%20Examples/Script-Template.pdf).
 
 ## cli.py, cli.java
 These files asks for input infinite amount of times until the user types one of the exit commands ("exit", "q", "quit", etc.) (the .java file currently only supports "exit"). This is mainly used for interface programs, that would take many commands within the program. 

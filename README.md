@@ -5,8 +5,10 @@ Hello! This repository is mainly for myself for files I might need time and time
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [File Descriptions](#File-Descriptions)
+    - [[LaTeX] Captions Template](##captions-template.tex)
     - [[LaTeX] General Template](##template.tex)
     - [[LaTeX] Lecture Notes Template](##lecture_template.tex)
+    - [[LaTeX] Script Template](##script-template.tex)
     - [[py, java] CLI Templates](##cli.py,-cli.java)
     - [[py] .vtt Subtitle Time Editor](##vtt.py)
     - [[py] Automated Email](##send_mail.py)
@@ -31,11 +33,17 @@ pip install requirements.txt
 If you want to run one of the python files and have python3 installed, you can install the required libraries via pip using the last line.
 
 # File Descriptions
+## captions-template.tex
+Template document for Theatre Accessibility Performance Captions because typing the script in LaTeX is faster than centering text in PowerPoint in each slide. [A PDF example can be found here]().
+
 ## template.tex
 This file is a basic boilerplate file LaTeX (a typesetting system) so you can get working on the important stuff faster.
 
 ## lecture_template.tex
 This file is written in LaTeX, and is meant to have all the lecture notes for a specific class during my time at university.
+
+## script-template.tex
+Template document for a theatre performance script. [A PDF example can be found here]().
 
 ## cli.py, cli.java
 These files asks for input infinite amount of times until the user types one of the exit commands ("exit", "q", "quit", etc.) (the .java file currently only supports "exit"). This is mainly used for interface programs, that would take many commands within the program. 

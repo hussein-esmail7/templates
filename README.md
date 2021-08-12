@@ -7,16 +7,16 @@ Hello! This repository is mainly for myself for files I might need time and time
 - [File Descriptions](#File-Descriptions)
     - [[LaTeX] Captions Template](##captions-template.tex)
     - [[LaTeX] General Template](##template.tex)
-    - [[LaTeX] Lecture Notes Template](##lecture_template.tex)
+    - [[LaTeX] Lecture Notes Template](##lecture-template.tex)
     - [[LaTeX] Script Template](##script-template.tex)
     - [[py, java] CLI Templates](##cli.py,-cli.java)
     - [[py] .vtt Subtitle Time Editor](##vtt.py)
-    - [[py] Automated Email](##send_mail.py)
+    - [[py] Automated Email](##send-mail.py)
     - [[py] Base64 Converter](##base64convert.py)
-    - [[py] Password Generator](##password_generator.py)
+    - [[py] Password Generator](##password-generator.py)
     - [[py] QR Code Generator](##QR.py)
     - [[py] Say Text Aloud](##voice.py)
-    - [[py] Selenium Template](##selenium_template.py)
+    - [[py] Selenium Template](##selenium-template.py)
     - [[sh] Template Generator Program](##template.sh)
     - [[txt] Requirements](##requirements.txt)
 - [Donate](#donate)
@@ -34,16 +34,16 @@ If you want to run one of the python files and have python3 installed, you can i
 
 # File Descriptions
 ## captions-template.tex
-Template document for Theatre Accessibility Performance Captions because typing the script in LaTeX is faster than centering text in PowerPoint in each slide. [A PDF example can be found here](https://github.com/hussein-esmail7/templates/blob/master/LaTeX%20PDF%20Examples/Captions-Template.pdf).
+Template document for Theatre Accessibility Performance Captions because typing the script in LaTeX is faster than centering text in PowerPoint in each slide. [A PDF example can be found here](https://github.com/hussein-esmail7/templates/blob/master/LaTeX%20PDF%20Examples/captions-template.pdf).
 
 ## template.tex
 This file is a basic boilerplate file LaTeX (a typesetting system) so you can get working on the important stuff faster.
 
-## lecture_template.tex
+## lecture-template.tex
 This file is written in LaTeX, and is meant to have all the lecture notes for a specific class during my time at university.
 
 ## script-template.tex
-Template document for a theatre performance script. [A PDF example can be found here](https://github.com/hussein-esmail7/templates/blob/master/LaTeX%20PDF%20Examples/Script-Template.pdf).
+Template document for a theatre performance script. [A PDF example can be found here](https://github.com/hussein-esmail7/templates/blob/master/LaTeX%20PDF%20Examples/script-template.pdf).
 
 ## cli.py, cli.java
 These files asks for input infinite amount of times until the user types one of the exit commands ("exit", "q", "quit", etc.) (the .java file currently only supports "exit"). This is mainly used for interface programs, that would take many commands within the program. 
@@ -51,14 +51,14 @@ These files asks for input infinite amount of times until the user types one of 
 ## vtt.py
 This program inputs a .vtt subtitle file, and asks for a time delay: HH:MM:SS:MS and outputs a new .vtt file with the time delay factored into every line.
 
-## send_mail.py
+## send-mail.py
 This program is a template if someone wants to send an email through a program. You would just have to replace the input variables.
 
 ## base64convert.py
 This file converts a base64 text to a text readable by the user (either by typing it in the arguments of the file or in its input field). If it is a URL, it will open it in the default browser.
 
-## password_generator.py
-This program generates a random password that can be used when creating internet accounts. If a number is typed along with the 'python3 password_generator.py', it will make a password of that length. For example: 'python3 password_generator.py 10'.
+## password-generator.py
+This program generates a random password that can be used when creating internet accounts. If a number is typed along with the 'python3 password-generator.py', it will make a password of that length. For example: 'python3 password-generator.py 10'.
 
 ## QR.py
 This program converts given text or clipboard to a QR code then opens the image in the default image viewer regardless of your operating system.
@@ -66,7 +66,7 @@ This program converts given text or clipboard to a QR code then opens the image 
 ## voice.py
 This program says whatever is inputted in its arguments via the terminal 'say' command.
 
-## selenium_template.py
+## selenium-template.py
 This program is a template for interacting with websites using selenium. This also has the capability of running the programs in the background so you don't have to see the webpages as it runs.
 
 ## template.sh

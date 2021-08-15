@@ -7,6 +7,9 @@ Date Updated: 2020 07 22
 Description: This program is a skeleton template for an infinite-input program
 """
 
+# This part is used for https://github.com/hussein-esmail7/template-maker
+# templateDescription: Python CLI Template
+
 import os
 import sys
 

@@ -5,6 +5,8 @@
  * Description: This program is a skeleton template for an infinite-input program
  */
 
+// This part is used for https://github.com/hussein-esmail7/template-maker
+// templateDescription: Java CLI Template
 
 import java.util.Arrays;
 import java.util.Scanner; // Import the Scanner class for user input

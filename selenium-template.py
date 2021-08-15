@@ -7,7 +7,7 @@ Description: [DESCRIPTION]
 '''
 
 # This part is used for https://github.com/hussein-esmail7/template-maker
-# templateDescription: Python Selenium Web Scraping Document
+# templateDescription: Python Selenium Web Scraper
 
 import os
 import sys # To exit the program

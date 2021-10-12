@@ -5,14 +5,14 @@
 // templateDescription: C Programming Document
 
 /*
-[FILE NAME]
-[CREATOR]
+[FILENAME]
+[AUTHOR]
 Created: [DATE]
 Updated: [DATE]
 Terminal command to compile file to an executable:
-    gcc -o [FILE FRONT] [FILE NAME] && chmod +x [FILE FRONT] && ./[FILE FRONT]
+    gcc -o [FILE FRONT] [FILENAME] && chmod +x [FILE FRONT] && ./[FILE FRONT]
 Terminal command to compile multiple files into one executable:
-    gcc [FILE NAME] <Other filenames> -o [FILE FRONT] && chmod +x [FILE FRONT] && ./[FILE FRONT]
+    gcc [FILENAME] <Other filenames> -o [FILE FRONT] && chmod +x [FILE FRONT] && ./[FILE FRONT]
 Description: [DESCRIPTION]
 */
 

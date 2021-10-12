@@ -7,12 +7,12 @@ using namespace std;
 // templateDescription: C++ Programming Document
 
 /*
-[FILE NAME]
-[CREATOR]
+[FILENAME]
+[AUTHOR]
 Created: [DATE]
 Updated: [DATE]
 Terminal command to run file:
-    g++ -o name [FILE NAME] && ./name
+    g++ -o name [FILENAME] && ./name
 Description: [DESCRIPTION]
 */
 

@@ -1,6 +1,6 @@
 '''
-[FILE NAME]
-[CREATOR]
+[FILENAME]
+[AUTHOR]
 Created: [DATE]
 Updated: [DATE]
 Description: [DESCRIPTION]

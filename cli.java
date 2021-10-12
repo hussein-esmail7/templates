@@ -1,8 +1,8 @@
 /* Java CLI Template Program
- * @author Hussein Esmail
- * Created: 2020 08 28
- * Updated: 2020 10 16
- * Description: This program is a skeleton template for an infinite-input program
+ * @author [AUTHOR]
+ * Created: [DATE]
+ * Updated: [DATE]
+ * Description: [DESCRIPTION]
  */
 
 // This part is used for https://github.com/hussein-esmail7/template-maker

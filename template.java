@@ -1,8 +1,8 @@
 package [FILE FRONT];
 
 /*
-[FILE NAME]
-Created by [CREATOR]
+[FILENAME]
+Created by [AUTHOR]
 Created: [DATE]
 Updated: [DATE]
 Description: [DESCROPTION]
@@ -14,7 +14,7 @@ Description: [DESCROPTION]
 public class [FILE FRONT] { 
 	
 	/**
-	 * @author [CREATOR]
+	 * @author [AUTHOR]
 	 * @param args
 	 */
 	public static void main(String[] args) {

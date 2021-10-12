@@ -3,9 +3,9 @@
 \# templateDescription: Groff Typesetting Document
 
 .TL
-[FILE NAME]
+[FILENAME]
 .AU
-[CREATOR]
+[AUTHOR]
 .DA "[DATE]"
 .PP
 This is a generic paragraph

@@ -7,7 +7,7 @@
 % This part is used for https://github.com/hussein-esmail7/template-maker
 % templateDescription: LaTeX Theatre Script Document
 
-% This version is from 2021 07 20
+% This version is from 2021 10 13
 
 % This file can be found at https://husseinesmail.com/guides/vcp/
 
@@ -54,6 +54,8 @@
 \newcommand{\mySubject}{PDF Subject Here}   % Used for Metadata
 \newcommand{\myKeywords}{PDF Keywords Here} % Separated by comma
 \newcommand{\myDate}{Created Date Here}     % Written or typed date
+\newcommand{\myBoolSpacing}{true}			% True to change spacing
+\newcommand{\myLineSpacing}{1.0}			% Line spacing (default=1)
 % =========================== Variables ===========================
 
 % You don't need to worry about this ``Configurations'' section. This is where 
@@ -66,11 +68,16 @@
 \usepackage{multirow}       % Multiple rows/columns in table
 \usepackage{longtable}      % Tables that can go past 1 page
 \usepackage{fancyhdr}       % Used for page numbers on RS
+\usepackage{setspace}		% Used to change line spacing
+\usepackage{ifthen}			% Used for booleans
 \setlength\parindent{0pt}   % Paragraph indent to 0
 \pagestyle{fancy}           % Turn on the style
 \fancyhead{}                % Clear the header and footer
 \fancyfoot{}
 \fancyfoot[R]{\thepage}     % Set RS of footer to page num
+% \setstretch{\myLineSpacing}	% Set line spacing; % TODO: Does not work yet
+\newboolean{spacing}
+\setboolean{spacing}{\myBoolSpacing}
 \title{\myTitle}            % Title  = stored variable
 \author{\myAuthor}          % Author = stored variable
 \date{\myDate}              % Date   = stored variable
@@ -87,6 +94,7 @@
 % need to know too much of how LaTeX works. If at any point you have questions 
 % about how to do something in LaTeX, please don't hesitate to email me at 
 % HusseinEsmailContact@gmail.com
+
 
 % Descriptions of these shortcuts:
 % \tab -> Used for stage directions for specific characters

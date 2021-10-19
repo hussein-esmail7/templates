@@ -1,6 +1,8 @@
 VCP Meeting
 [DATE]
 
+# templateDescription: VCP Meeting Template for Hussein
+
 Before Meeting:
 - 
 

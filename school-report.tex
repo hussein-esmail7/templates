@@ -1,0 +1,82 @@
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This part is used for https://github.com/hussein-esmail7/template-maker
+% templateDescription: School Report LaTeX Template
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% =========================== Variables ===========================
+\newcommand{\myStudentNum}			{}	% TODO: Student number here
+\newcommand{\myCourse}				{}	% TODO: Course (+ section if required)
+\newcommand{\mySubject}				{}	% TODO: PDF subjects
+\newcommand{\myKeywords}			{}	% TODO: PDF keywords, sep. by comma
+\newcommand{\myName}				{[AUTHOR]}			% Author of this file
+\newcommand{\myDate}				{[DATE]}			% Date on cover page
+\newcommand{\myTitle}				{[FILE FRONT]}		% Title on cover page
+% =========================== Variables ===========================
+
+% =========================== Shortcuts ===========================
+\newcommand{\comment}[1]{}                          % Multiline comments
+\newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
+\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newcommand{\myAuthor}{\myName{} \myStudentNum{}} % Author format
+% =========================== Shortcuts ===========================
+
+\documentclass{article}
+\title{\myTitle}
+\author{\myAuthor}
+\date{\myCourseDateUpdated} 
+
+\usepackage{hyperref}   % Used for adding PDF metadata
+\usepackage{listings}   % Used for blocks of code
+\usepackage{graphicx}   % Used for adding images
+\usepackage{listings}   % Used for blocks of code
+
+\graphicspath{{./}}     % Import images that are in the same folder as this .tex file
+
+\hypersetup{
+    colorlinks=true,
+	urlcolor=blue,			% URL colors (\href{}{})
+	linkcolor=black,		% TOC colors
+    pdfborder={0 0 0},
+    pdftitle={\myTitle},
+    pdfauthor={\myAuthor},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
+}
+
+\lstset{        % Coding block configuration
+  basicstyle=\ttfamily,
+  frame=single,
+  breaklines=true
+}
+
+\begin{document}        % Official beginning of the document. 
+% \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
+\maketitle              % Make title page
+\newpage                % Insert a page break
+\tableofcontents        % Makes TOC
+\newpage                % Insert a page break
+% \pagenumbering{arabic}  % Brings the normal numbers back
+
+\section{Introduction}
+% TODO: Purpose of this document here
+
+\section{Question 1}
+% TODO: Question 1 content here
+
+\section{Question 2}
+% TODO: Question 2 content here
+
+\section{Question 3}
+% TODO: Question 3 content here
+
+% Template line so formatting is faster
+% \section{Question _}
+
+\end{document}

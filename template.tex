@@ -13,8 +13,8 @@
 \newcommand{\myAuthor}              {[AUTHOR]} % Author of this file
 \newcommand{\mySubject}             {PDF Subject Here}  % Used for Metadata
 \newcommand{\myKeywords}            {PDF Keywords Here} % Separated by comma
-\newcommand{\myCourseDateCreated}   {[DATE]}
-\newcommand{\myCourseDateUpdated}   {\today}
+\newcommand{\myDateCreated}   {[DATE]}
+\newcommand{\myDateUpdated}   {\today}
 \newcommand{\myTitle}               {[FILE FRONT]}
 % =========================== Variables ===========================
 
@@ -28,21 +28,23 @@
 \documentclass{article}
 \title{\myTitle}
 \author{\myAuthor}
-\date{\myCourseDateUpdated} 
+\date{\myDateUpdated}
 
 \usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
 \usepackage{graphicx}   % Used for adding images
-\usepackage{listings}   % Used for blocks of code
+\usepackage{enumitem}
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
 \hypersetup{
-    colorlinks=false, 
+    colorlinks=false,
+	urlcolor=blue,		% URL colors (\href{}{})
+	linkcolor=black,	% TOC colors
     pdfborder={0 0 0},
-    pdftitle={\myTitle}, 
-    pdfauthor={\myAuthor}, 
-    pdfsubject={\mySubject}, 
+    pdftitle={\myTitle},
+    pdfauthor={\myAuthor},
+    pdfsubject={\mySubject},
     pdfkeywords={\myKeywords}
 }
 
@@ -51,6 +53,12 @@
   frame=single,
   breaklines=true
 }
+
+% Prevent word hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 \begin{document}        % Official beginning of the document. 
 % \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
@@ -63,15 +71,15 @@
 \section{Introduction}
 % TODO: Purpose of this document here
 
-At the time of writing this document, all URLs in this document are correct. 
-Should you have any issues, please 
+At the time of writing this document, all URLs in this document are correct.
+Should you have any issues, please
 \underline{\href{mailto:HusseinEsmailContact@gmail.com}
 {feel free to send me an email}}.
 
 \section{How This Guide is Formatted}
-This guide is made using \LaTeX{}, a typesetting document format, mainly used 
-for large documents like STEM documents, theses, and research papers. To read 
-more about what I think about \LaTeX{}, you 
+This guide is made using \LaTeX{}, a typesetting document format, mainly used
+for large documents like STEM documents, theses, and research papers. To read
+more about what I think about \LaTeX{}, you
 \href{https://husseinesmail.xyz/articles/is-latex-better.html}{can go here}.
 
 \end{document}

@@ -36,7 +36,7 @@
 \documentclass{article}
 \title{\myTitle}
 \author{\myAuthor}
-\date{\myCourseDateUpdated} 
+\date{\myCourseDateUpdated}
 
 \usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
@@ -45,11 +45,13 @@
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
 \hypersetup{
-    colorlinks=false, 
+    colorlinks=false,
+	urlcolor=blue,		% URL colors (\href{}{})
+	linkcolor=black,	% TOC colors
     pdfborder={0 0 0},
-    pdftitle={\myTitle}, 
-    pdfauthor={\myAuthor}, 
-    pdfsubject={\mySubject}, 
+    pdftitle={\myTitle},
+    pdfauthor={\myAuthor},
+    pdfsubject={\mySubject},
     pdfkeywords={\myKeywords}
 }
 
@@ -58,8 +60,15 @@
   frame=single,
   breaklines=true
 }
-\begin{document}        % Official beginning of the document. 
-\pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
+
+% Prevent word hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}        % Official beginning of the document.
+\pagenumbering{roman}   % Use roman numbers before content
 \maketitle              % Make title page
 \newpage                % Insert a page break
 \tableofcontents        % Makes TOC
@@ -67,36 +76,43 @@
 \pagenumbering{arabic}  % Brings the normal numbers back
 
 \section{Introduction}
-This PDF is the collection of my lecture notes for \myCourseCode{} that took place during the \myCourseSemester{} semester. This was taught by \myCourseProf{} for section \myCourseSection{}. This occurs on: \myCourseSchedule{} at \myCourseLocation{}.
+This PDF is the collection of my lecture notes for \myCourseCode{} that took
+place during the \myCourseSemester{} semester. This was taught by
+\myCourseProf{} for section \myCourseSection{}. This occurs on:
+\myCourseSchedule{} at \myCourseLocation{}.
 
-At the time of writing this document, all URLs in this document are correct. Should you have any issues, please \underline{\href{mailto:HusseinEsmailContact@gmail.com}{feel free to send me an email}}. 
+At the time of writing this document, all URLs in this document are correct.
+Should you have any issues, please
+\underline{\href{mailto:HusseinEsmailContact@gmail.com}{feel free to send me an
+email}}. 
 
 \section{How This Guide is Formatted}
-This guide is made using \LaTeX{}, a typesetting document format, mainly used for large documents like STEM documents, theses, and research papers. To read more about what I think about \LaTeX{}, you \href{https://husseinesmail.xyz/articles/is-latex-better.html}{can go here}.
-
+This guide is made using \LaTeX{}, a typesetting document format, mainly used
+for large documents like STEM documents, theses, and research papers. To read
+more about what I think about \LaTeX{}, you
+\href{https://husseinesmail.xyz/articles/is-latex-better.html}{can go here}.
 
 % TODO: Lecture notes here
 
-
 \comment{   % Lecture template
-\section{Lecture: DATE}
+\section{Lecture NUM: DATE}
 \begin{itemize*}
     \item NOTES HERE
 \end{itemize*}
 }
 
 \comment{   % Tutorial template
-\section{Tutorial: DATE}
+\section{Tutorial NUM: DATE}
 \begin{itemize*}
     \item NOTES HERE
 \end{itemize*}
-}   
+}
 
 \comment{   % Lab template
-\section{Lab: DATE}
+\section{Lab NUM: DATE}
 \begin{itemize*}
     \item NOTES HERE
 \end{itemize*}
-}   
+}
 
-\end{document} % Official end of the document. 
+\end{document} % Official end of the document.

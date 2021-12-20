@@ -29,8 +29,9 @@
 % =========================== Shortcuts ===========================
 \newcommand{\comment}[1]{}                          % Multiline comments
 \newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
-\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
-\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}} % Bullet list
+\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}} % Numbered list
+\newenvironment{enumalph*}{\begin{enumerate}[label=\alph*.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}} % Alphebetized list (lowercase)
 % =========================== Shortcuts ===========================
 
 \documentclass{article}
@@ -41,7 +42,7 @@
 \usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
 \usepackage{graphicx}   % Used for adding images
-\usepackage{enumitem}
+\usepackage{enumitem}	% Used for alphebetized lists
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 

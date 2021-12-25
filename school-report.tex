@@ -30,7 +30,7 @@
 \documentclass{article}
 \title{\myTitle}
 \author{\myAuthor}
-\date{\myCourseDateUpdated} 
+\date{\myCourseDateUpdated}
 
 \usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
@@ -55,6 +55,12 @@
   frame=single,
   breaklines=true
 }
+
+% Prevent word hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 \begin{document}        % Official beginning of the document. 
 % \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script

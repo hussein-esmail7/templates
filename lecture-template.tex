@@ -18,7 +18,8 @@
 \newcommand{\myCourseCredits}       {Credits num}
 \newcommand{\myCourseCode}          {Course Code Here}
 \newcommand{\myCourseTitle}         {Course Title here}
-\newcommand{\myCourseProf}          {Course Prof Here}    % First Last only
+\newcommand{\myCourseProf}          {Course Prof Here} % First Last only
+\newcommand{\Prof}					{Course Prof Here} % First only (used for referencing in-document)
 \newcommand{\myCourseSemester}      {Year and season here} % Ex. 2019F 
 \newcommand{\myCourseSchedule}      {Weekdays/Times of Day Here} % Ex. MWF 9:00
 \newcommand{\myCourseSection}       {Section Here} % Single letter
@@ -49,7 +50,7 @@
 \hypersetup{
     colorlinks=true,
 	urlcolor=blue,		% URL colors (\href{}{})
-	linkcolor=black,	% TOC colors
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
     pdfborder={0 0 0},
     pdftitle={\myTitle},
     pdfauthor={\myAuthor},
@@ -74,6 +75,7 @@
 \maketitle              % Make title page
 \newpage                % Insert a page break
 \tableofcontents        % Makes TOC
+\hypersetup{linkcolor=blue} % Any links to other sections are now blue
 \newpage                % Insert a page break
 \pagenumbering{arabic}  % Brings the normal numbers back
 

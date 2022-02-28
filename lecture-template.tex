@@ -41,14 +41,15 @@
 \usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
 \usepackage{graphicx}   % Used for adding images
-\usepackage{enumitem}
+\usepackage{enumitem}	% Used for alphebetized lists
+\usepackage{longtable}	% Used for tables with more capability
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
 \hypersetup{
     colorlinks=true,
 	urlcolor=blue,		% URL colors (\href{}{})
-	linkcolor=black,	% TOC colors
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
     pdfborder={0 0 0},
     pdftitle={\myTitle},
     pdfauthor={\myAuthor},
@@ -73,6 +74,7 @@
 \maketitle              % Make title page
 \newpage                % Insert a page break
 \tableofcontents        % Makes TOC
+\hypersetup{linkcolor=blue} % Any links to other sections are now blue
 \newpage                % Insert a page break
 \pagenumbering{arabic}  % Brings the normal numbers back
 

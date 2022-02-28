@@ -5,53 +5,53 @@
 % Description: [DESCRIPTION]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
-% templateDescription: LaTeX Theatre Captions Document
+% templateDescription: 4 - LaTeX Theatre Captions Document
 
 % This version is from 2021 07 20
 
 % This file can be found at https://husseinesmail.xyz/guides/vcp/
 
-% Description of THIS file: This is a LaTeX (pronounced `Lah-tech') template 
+% Description of THIS file: This is a LaTeX (pronounced `Lah-tech') template
 %	document for Theatre Accessibility Performance Captions because typing the
-%   script in LaTeX is faster than centering text in PowerPoint in each slide. 
+%   script in LaTeX is faster than centering text in PowerPoint in each slide.
 
 % What is LaTeX? definition from https://www.latex-project.org/about
-% LaTeX is a document preparation system for high-quality typesetting. It is 
-%	most often used for medium-to-large technical or scientific documents but 
+% LaTeX is a document preparation system for high-quality typesetting. It is
+%	most often used for medium-to-large technical or scientific documents but
 %	it can be used for almost any form of publishing.
 
 % Why use LaTeX instead of PowerPoint?
-% 1. You don't have to center text manually, LaTeX does it by itself when you 
+% 1. You don't have to center text manually, LaTeX does it by itself when you
 %		tell it to.
-% 2. LaTeX doesn't require a Microsoft Office licence to use. It's free for 
+% 2. LaTeX doesn't require a Microsoft Office licence to use. It's free for
 %		everyone (and part of the Free Open Source Software movement)!
-% 3. If you have a table of contents with numbered sections and you add another 
+% 3. If you have a table of contents with numbered sections and you add another
 %		one in the middle, everything is renumbered automatically
-% 4. (The reason why it got me into it) It can be typed in any text editor 
-%		(though I recommend using VSCode with the "LaTeX Workshop" extension 
+% 4. (The reason why it got me into it) It can be typed in any text editor
+%		(though I recommend using VSCode with the "LaTeX Workshop" extension
 %		by James Yu).
 
-% This document is formatted so that you can follow along with these comments 
+% This document is formatted so that you can follow along with these comments
 %	(starting with a `%') so you know what's happening. You may notice that the
-%	lines aren't exceeding 80 characters, and even go to a new line 
+%	lines aren't exceeding 80 characters, and even go to a new line
 %	mid-sentence. This is just a personal preference and is not at all required
 %	by LaTeX.
 
-% Here is the variables section where you can easily change what parameters 
-%	are used (aspect ratio of the slides, background colour, text colour, 
+% Here is the variables section where you can easily change what parameters
+%	are used (aspect ratio of the slides, background colour, text colour,
 %	text size, title, etc.)
 
 % =========================== Variables ===========================
-\newcommand{\myAspectRatio}{169}        % Aspect ratio
-\newcommand{\myColorBackground}{black}  % Background colour
-\newcommand{\myColorForeground}{white}  % Text colour
-\newcommand{\myFontsize}{30pt}          % Font size
-\newcommand{\myParagraphSpacing}{0em}   % Spacing between paragraphs
-\newcommand{\myTitle}{Show Title Here}  % Title of show, on the first frame
+\def{\myAspectRatio}{169}        % Aspect ratio
+\def{\myColorBackground}{black}  % Background colour
+\def{\myColorForeground}{white}  % Text colour
+\def{\myFontsize}{30pt}          % Font size
+\def{\myParagraphSpacing}{0em}   % Spacing between paragraphs
+\def{\myTitle}{Show Title Here}  % Title of show, on the first frame
 % =========================== Variables ===========================
 
-% You don't need to worry about this ``Configurations'' section. This is where 
-% most of the variable values are actually implemented (setting the colours, 
+% You don't need to worry about this ``Configurations'' section. This is where
+% most of the variable values are actually implemented (setting the colours,
 % text size, etc.)
 
 % ======================== Configurations ========================
@@ -74,8 +74,8 @@
 \hbadness=10000
 % ======================== Configurations ========================
 
-\begin{document} 
-% Official beginning of the document. 
+\begin{document}
+% Official beginning of the document.
 % Everything before \begin{document} is called the ``Preamble''
 
 % Comments inside this document `environment' do not show in the compiled PDF
@@ -95,8 +95,8 @@
 %     % Text here
 % \end{frame}
 
-% You may notice the text is indented here. This does not show up in the actual 
-% document. the issue with this is that the text is not centered. For that, we 
+% You may notice the text is indented here. This does not show up in the actual
+% document. the issue with this is that the text is not centered. For that, we
 % want to do something like this:
 % \begin{frame}
 %     \begin{center}
@@ -104,8 +104,8 @@
 %     \end{center}
 % \end{frame}
 
-% If you want to have a designated line break on a slide, I recommend using 2 
-% backslashes ("\\"). In LateX, this means make a new line. here is an example 
+% If you want to have a designated line break on a slide, I recommend using 2
+% backslashes ("\\"). In LateX, this means make a new line. here is an example
 % of that:
 % \begin{frame}
 %     \begin{center}
@@ -113,23 +113,23 @@
 %     \end{center}
 % \end{frame}
 
-% There are other special characters that you should be aware of, but it might 
-% be easier if you search them online as you go. Here are just some until you 
+% There are other special characters that you should be aware of, but it might
+% be easier if you search them online as you go. Here are just some until you
 % need to search yourself:
 % 3 consecutive period dots (``...''): $\ldots$
-% Quotation marks: `` for the beginning double quotation marks, and '' 
+% Quotation marks: `` for the beginning double quotation marks, and ''
 %	for the ending double quotation marks. Same for ` and '.
 % Italic text: \textit{Text here}
 % Bold text: \textbf{Text here}
 % Underlined: \underline{Text here}
 
-% New paragraph: 2 empty lines in between. Ex: If the last word is on line 30, 
-% line 31 must be empty, and the new paragraph starts on line 32. If there is 
-% text on line 31, it looks as if it's in the same paragraph (I would also use 
+% New paragraph: 2 empty lines in between. Ex: If the last word is on line 30,
+% line 31 must be empty, and the new paragraph starts on line 32. If there is
+% text on line 31, it looks as if it's in the same paragraph (I would also use
 % this to your advantage here for readability while typing).
 
-% For italic, bold, underline, etc., if you want multiple, these commands can 
-% be placed inside one another (order doesn't matter). Example: 
+% For italic, bold, underline, etc., if you want multiple, these commands can
+% be placed inside one another (order doesn't matter). Example:
 % \textbf{\underline{This sentence is bolded and underlined.}}
 
 \begin{frame}
@@ -140,8 +140,8 @@
 
 \begin{frame}
     \begin{center}
-        
+
     \end{center}
 \end{frame}
 
-\end{document} % Official end of the document. 
+\end{document} % Official end of the document.

@@ -5,17 +5,17 @@
 % Description: [DESCRIPTION]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
-% templateDescription: Default LaTeX Template
+% templateDescription: 1 - Default LaTeX Template
 
 % This file can be found at https://github.com/hussein-esmail7/templates
 
 % =========================== Variables ===========================
-\newcommand{\myAuthor}              {[AUTHOR]} % Author of this file
-\newcommand{\mySubject}             {PDF Subject Here}  % Used for Metadata
-\newcommand{\myKeywords}            {PDF Keywords Here} % Separated by comma
-\newcommand{\myDateCreated}   {[DATE]}
-\newcommand{\myDateUpdated}   {\today}
-\newcommand{\myTitle}               {[FILE FRONT]}
+\def{\myAuthor}				{[AUTHOR]} % Author of this file
+\def{\mySubject}			{PDF Subject Here}  % Used for Metadata
+\def{\myKeywords}			{PDF Keywords Here} % Separated by comma
+\def{\myDateCreated}		{[DATE]}
+\def{\myDateUpdated}		{\today}
+\def{\myTitle}				{[FILE FRONT]}
 % =========================== Variables ===========================
 
 % =========================== Shortcuts ===========================
@@ -23,6 +23,7 @@
 \newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
 \newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
 \newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newenvironment{enumalph*}{\begin{enumerate}[label=\alph*.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
 % =========================== Shortcuts ===========================
 
 \documentclass{article}
@@ -38,7 +39,7 @@
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
 \hypersetup{
-    colorlinks=false,
+    colorlinks=true,
 	urlcolor=blue,		% URL colors (\href{}{})
 	linkcolor=black,	% TOC colors
     pdfborder={0 0 0},
@@ -60,7 +61,7 @@
 \hyphenpenalty=10000
 \hbadness=10000
 
-\begin{document}        % Official beginning of the document. 
+\begin{document}        % Official beginning of the document.
 % \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
 \maketitle              % Make title page
 \newpage                % Insert a page break

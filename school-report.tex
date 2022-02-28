@@ -5,18 +5,18 @@
 % Description: [DESCRIPTION]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
-% templateDescription: School Report LaTeX Template
+% templateDescription: 3 - School Report LaTeX Template
 
 % This file can be found at https://github.com/hussein-esmail7/templates
 
 % =========================== Variables ===========================
-\newcommand{\myStudentNum}			{}	% TODO: Student number here
-\newcommand{\myCourse}				{}	% TODO: Course (+ section if required)
-\newcommand{\mySubject}				{}	% TODO: PDF subjects
-\newcommand{\myKeywords}			{}	% TODO: PDF keywords, sep. by comma
-\newcommand{\myName}				{[AUTHOR]}			% Author of this file
-\newcommand{\myDate}				{[DATE]}			% Date on cover page
-\newcommand{\myTitle}				{[FILE FRONT]}		% Title on cover page
+\def{\myStudentNum}			{}	% TODO: Student number here
+\def{\myCourse}				{}	% TODO: Course (+ section if required)
+\def{\mySubject}				{}	% TODO: PDF subjects
+\def{\myKeywords}			{}	% TODO: PDF keywords, sep. by comma
+\def{\myName}				{[AUTHOR]}			% Author of this file
+\def{\myDate}				{[DATE]}			% Date on cover page
+\def{\myTitle}				{[FILE FRONT]}		% Title on cover page
 % =========================== Variables ===========================
 
 % =========================== Shortcuts ===========================
@@ -62,7 +62,7 @@
 \hyphenpenalty=10000
 \hbadness=10000
 
-\begin{document}        % Official beginning of the document. 
+\begin{document}        % Official beginning of the document.
 % \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
 \maketitle              % Make title page
 \newpage                % Insert a page break

@@ -5,33 +5,32 @@
 % Description: [DESCRIPTION]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
-% templateDescription: LaTeX Course Lecture Notes Document
+% templateDescription: 2 - LaTeX School Course Lecture Notes Document
 
 % This file can be found at https://github.com/hussein-esmail7/templates
 
 % =========================== Variables ===========================
-\newcommand{\myAuthor}              {[AUTHOR]} % Author of the show
-\newcommand{\mySubject}             {PDF Subject Here}  % Used for Metadata
-\newcommand{\myKeywords}            {PDF Keywords Here} % Separated by comma
-\newcommand{\myCourseDateCreated}   {Created Date Here}
-\newcommand{\myCourseDateUpdated}   {\today}
-\newcommand{\myCourseCredits}       {Credits num}
-\newcommand{\myCourseCode}          {Course Code Here}
-\newcommand{\myCourseTitle}         {Course Title here}
-\newcommand{\myCourseProf}          {Course Prof Here}    % First Last only
-\newcommand{\myCourseSemester}      {Year and season here} % Ex. 2019F 
-\newcommand{\myCourseSchedule}      {Weekdays/Times of Day Here} % Ex. MWF 9:00
-\newcommand{\myCourseSection}       {Section Here} % Single letter
-\newcommand{\myCourseLocation}      {Course Location}
-\newcommand{\myTitle}{\myCourseCode{} \myCourseCredits{}: \myCourseTitle{} \\ \myCourseSemester{} - \myCourseSchedule{}}
+\def{\myAuthor}              {[AUTHOR]} % Author of the show
+\def{\mySubject}             {PDF Subject Here}  % Used for Metadata
+\def{\myKeywords}            {PDF Keywords Here} % Separated by comma
+\def{\myCourseDateCreated}   {Created Date Here}
+\def{\myCourseDateUpdated}   {\today}
+\def{\myCourseCredits}       {Credits num}
+\def{\myCourseCode}          {Course Code Here}
+\def{\myCourseTitle}         {Course Title here}
+\def{\myCourseProf}          {Course Prof Here}    % First Last only
+\def{\myCourseSemester}      {Year and season here} % Ex. 2019F
+\def{\myCourseSchedule}      {Weekdays/Times of Day Here} % Ex. MWF 9:00
+\def{\myCourseSection}       {Section Here} % Single letter
+\def{\myCourseLocation}      {Course Location}
+\def{\myTitle}{\myCourseCode{} \myCourseCredits{}: \myCourseTitle{} \\ \myCourseSemester{} - \myCourseSchedule{}}
 % =========================== Variables ===========================
 
 % =========================== Shortcuts ===========================
 \newcommand{\comment}[1]{}                          % Multiline comments
 \newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
-\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}} % Bullet list
-\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}} % Numbered list
-\newenvironment{enumalph*}{\begin{enumerate}[label=\alph*.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}} % Alphebetized list (lowercase)
+\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
 % =========================== Shortcuts ===========================
 
 \documentclass{article}
@@ -42,7 +41,7 @@
 \usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
 \usepackage{graphicx}   % Used for adding images
-\usepackage{enumitem}	% Used for alphebetized lists
+\usepackage{enumitem}
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
@@ -86,7 +85,7 @@ place during the \myCourseSemester{} semester. This was taught by
 At the time of writing this document, all URLs in this document are correct.
 Should you have any issues, please
 \underline{\href{mailto:HusseinEsmailContact@gmail.com}{feel free to send me an
-email}}. 
+email}}.
 
 \section{How This Guide is Formatted}
 This guide is made using \LaTeX{}, a typesetting document format, mainly used

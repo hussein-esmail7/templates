@@ -10,27 +10,34 @@
 % This file can be found at https://github.com/hussein-esmail7/templates
 
 % =========================== Variables ===========================
-\def{\myAuthor}              {[AUTHOR]} % Author of the show
-\def{\mySubject}             {PDF Subject Here}  % Used for Metadata
-\def{\myKeywords}            {PDF Keywords Here} % Separated by comma
-\def{\myCourseDateCreated}   {Created Date Here}
-\def{\myCourseDateUpdated}   {\today}
-\def{\myCourseCredits}       {Credits num}
-\def{\myCourseCode}          {Course Code Here}
-\def{\myCourseTitle}         {Course Title here}
-\def{\myCourseProf}          {Course Prof Here}    % First Last only
-\def{\myCourseSemester}      {Year and season here} % Ex. 2019F
-\def{\myCourseSchedule}      {Weekdays/Times of Day Here} % Ex. MWF 9:00
-\def{\myCourseSection}       {Section Here} % Single letter
-\def{\myCourseLocation}      {Course Location}
-\def{\myTitle}{\myCourseCode{} \myCourseCredits{}: \myCourseTitle{} \\ \myCourseSemester{} - \myCourseSchedule{}}
+\def\myAuthor              {[AUTHOR]} % Author of the show
+\def\mySubject             {PDF Subject Here}  % Used for Metadata
+\def\myKeywords            {PDF Keywords Here} % Separated by comma
+\def\myCourseDateCreated   {Created Date Here}
+\def\myCourseDateUpdated   {\today}
+\def\myCourseCredits       {Credits num}
+\def\myCourseCode          {Course Code Here}
+\def\myCourseTitle         {Course Title here}
+\def\myCourseProf          {Course Prof Here}    % First Last only
+\def\myCourseSemester      {Year and season here} % Ex. 2019F
+\def\myCourseSchedule      {Weekdays/Times of Day Here} % Ex. MWF 9:00
+\def\myCourseSection       {Section Here} % Single letter
+\def\myCourseLocation      {Course Location}
+\def\myTitle{\myCourseCode{} \myCourseCredits{}: \myCourseTitle{} \\ \myCourseSemester{} - \myCourseSchedule{}}
 % =========================== Variables ===========================
 
 % =========================== Shortcuts ===========================
-\newcommand{\comment}[1]{}                          % Multiline comments
+\def\bg{backgroundcolor}
+\def\len{\setlength}
 \newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
 \newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
 \newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newenvironment{enumalph*}{\begin{enumerate}[label=\alph*.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newenvironment{enumq*}{\begin{enumerate}[label=Q{{\arabic*}}.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newcommand{\TODO}[1]{\todo[backgroundcolor=none, linecolor=red]{#1}}
+\newcommand{\TODOimg}[1]{\todo[inline, \bg=gray]{\textbf{IMG}: #1}}
+\newcommand{\TODOcontent}[1]{\todo[\bg=red, linecolor=red]{\textbf{CON}: #1}}
+\newcommand{\TODOfig}[1]{\todo[inline, \bg=orange]{\textbf{FIG}: #1}}
 % =========================== Shortcuts ===========================
 
 \documentclass{article}
@@ -38,11 +45,18 @@
 \author{\myAuthor}
 \date{\myCourseDateUpdated}
 
-\usepackage{hyperref}   % Used for adding PDF metadata
-\usepackage{listings}   % Used for blocks of code
+\usepackage[colorinlistoftodos]{todonotes}	% Used for "to do" notes
+\usepackage{amssymb}	% Used for math symbols
+\usepackage{comment}	% Used for the 'comment' environment (multi-line)
+\usepackage{enumitem}	% Used for enumalpha environment
+\usepackage{float}		% Used for ``H'' flag in figure environment
 \usepackage{graphicx}   % Used for adding images
-\usepackage{enumitem}	% Used for alphebetized lists
-\usepackage{longtable}	% Used for tables with more capability
+\usepackage{listings}   % Used for blocks of code
+\usepackage{longtable}	% Used to format longtables properly
+\usepackage{multirow}
+\usepackage{xcolor}
+
+\usepackage{hyperref}   % Used for adding PDF metadata
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
@@ -72,8 +86,11 @@
 \begin{document}        % Official beginning of the document.
 \pagenumbering{roman}   % Use roman numbers before content
 \maketitle              % Make title page
-\newpage                % Insert a page break
 \tableofcontents        % Makes TOC
+\newpage
+\listoffigures			% Makes ``List of Figures''
+\todototoc				% Add "Todo list" to main TOC
+\listoftodos			% Show all todo notes (from todonotes package) as index
 \hypersetup{linkcolor=blue} % Any links to other sections are now blue
 \newpage                % Insert a page break
 \pagenumbering{arabic}  % Brings the normal numbers back
@@ -97,25 +114,35 @@ more about what I think about \LaTeX{}, you
 
 % TODO: Lecture notes here
 
-\comment{   % Lecture template
+\begin{comment}
+% Lecture template
 \section{Lecture NUM: DATE}
 \begin{itemize*}
     \item NOTES HERE
 \end{itemize*}
-}
+\end{comment}
 
-\comment{   % Tutorial template
+\begin{comment}
+% Tutorial template
 \section{Tutorial NUM: DATE}
 \begin{itemize*}
     \item NOTES HERE
 \end{itemize*}
-}
+\end{comment}
 
-\comment{   % Lab template
+\begin{comment}
+% Lab template
 \section{Lab NUM: DATE}
 \begin{itemize*}
     \item NOTES HERE
 \end{itemize*}
-}
+\end{comment}
 
+\begin{comment}
+	TODO commands (using the todonotes package):
+	\TODO{}			-> Normal
+	\TODOimg{}		-> Insert image
+	\TODOcontent{}	-> Insert more content here
+	\TODOfig{}		-> Insert figure
+\end{comment}
 \end{document} % Official end of the document.

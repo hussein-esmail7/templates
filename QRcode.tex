@@ -1,0 +1,49 @@
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This part is used for https://github.com/hussein-esmail7/template-maker
+% templateDescription: 6 - QR Code Poster in LaTeX
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% =========================== Variables ===========================
+\def\myTitle			{[FILE FRONT]}
+\documentclass{article}
+\title{\myTitle}
+\date{ } % Must set to empty or else it will display the current date
+
+% If you want the date to show up on the document
+% \date{[DATE]}
+
+\usepackage{qrcode}		% Used for generating the QR code
+\usepackage{hyperref}   % Used for adding PDF metadata
+
+\hypersetup{
+    colorlinks=true,
+	urlcolor=black,		% URL colors (\href{}{}) and QR codes of URLs
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
+    pdfborder={0 0 0},
+    pdftitle={\myTitle},
+    pdfauthor={\myAuthor},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
+}
+
+\begin{document}        % Official beginning of the document.
+\maketitle              % Make title page
+\pagenumbering{gobble}  % Sets to no page numbering
+% \pagenumbering{arabic}  % Brings the normal numbers back
+
+\hypersetup{linkcolor=black} % Any links to other sections are now black
+\centering
+
+% This version for a black QR code and no hyperlink
+\qrcode[nolink, height=3in]{Test} % QR Code contents in the {}
+
+% Normal version
+% \qrcode[height=3in]{Test} % QR Code contents in the {}
+
+\end{document}        % Official beginning of the document.

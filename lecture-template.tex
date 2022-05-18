@@ -2,7 +2,7 @@
 % Author: [AUTHOR]
 % Created: [DATE]
 % Updated: [DATE]
-% Description: [DESCRIPTION]
+% Description: [DESC]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
 % templateDescription: 2 - LaTeX School Course Lecture Notes Document
@@ -11,18 +11,19 @@
 
 % =========================== Variables ===========================
 \def\myAuthor              {[AUTHOR]} % Author of the show
-\def\mySubject             {PDF Subject Here}  % Used for Metadata
-\def\myKeywords            {PDF Keywords Here} % Separated by comma
-\def\myCourseDateCreated   {Created Date Here}
+\def\mySubject             {[SUBJ]}
+\def\myKeywords            {[KEYWORDS]} % Separated by comma
+\def\myCourseDateCreated   {[DATE]}
 \def\myCourseDateUpdated   {\today}
-\def\myCourseCredits       {Credits num}
-\def\myCourseCode          {Course Code Here}
-\def\myCourseTitle         {Course Title here}
-\def\myCourseProf          {Course Prof Here}    % First Last only
-\def\myCourseSemester      {Year and season here} % Ex. 2019F
-\def\myCourseSchedule      {Weekdays/Times of Day Here} % Ex. MWF 9:00
-\def\myCourseSection       {Section Here} % Single letter
-\def\myCourseLocation      {Course Location}
+\def\myCourseCredits       {[COURSE-CREDITS]}
+\def\myCourseCode          {[COURSE-CODE]}
+\def\myCourseTitle         {[COURSE-TITLE]}
+\def\myCourseProf          {[COURSE-PROF]}    % First Last only
+\def\Prof				   {[PROF]}    % First name only
+\def\myCourseSemester      {[COURSE-SEMESTER]} % Ex. 2019F
+\def\myCourseSchedule      {[COURSE-SCHEDULE]} % Ex. MWF 9:00
+\def\myCourseSection       {[COURSE-SECTION]} % Single letter
+\def\myCourseLocation      {[COURSE-LOCATION]}
 \def\myTitle{\myCourseCode{} \myCourseCredits{}: \myCourseTitle{} \\ \myCourseSemester{} - \myCourseSchedule{}}
 % =========================== Variables ===========================
 
@@ -41,7 +42,7 @@
 % =========================== Shortcuts ===========================
 
 \documentclass{article}
-\title{\myTitle}
+\title{\vspace{-3cm} \\ \myTitle}
 \author{\myAuthor}
 \date{\myCourseDateUpdated}
 

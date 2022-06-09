@@ -1,0 +1,118 @@
+% TODO: THIS TEMPLATE IS A WORK IN PROGRESS
+
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This part is used for https://github.com/hussein-esmail7/template-maker
+% templateDescription: 7 - Timetable Schedule LaTeX Template
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% =========================== Variables ===========================
+\def\myAuthor			{[AUTHOR]} % Author of this file
+\def\mySubject			{PDF Subject Here}  % Used for Metadata
+\def\myKeywords			{PDF Keywords Here} % Separated by comma
+\def\myDateCreated		{[DATE]}
+\def\myDateUpdated		{\today}
+\def\myTitle			{[FILE FRONT]}
+% =========================== Variables ===========================
+
+% =========================== Shortcuts ===========================
+\def\bg{backgroundcolor}
+\def\len{\setlength}
+\newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
+\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newenvironment{enumalph*}{\begin{enumerate}[label=\alph*.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newenvironment{enumq*}{\begin{enumerate}[label=Q{{\arabic*}}.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
+\newcommand{\TODO}[1]{\todo[backgroundcolor=none, linecolor=red]{#1}}
+\newcommand{\TODOimg}[1]{\todo[inline, \bg=gray]{\textbf{IMG}: #1}}
+\newcommand{\TODOcontent}[1]{\todo[\bg=red, linecolor=red]{\textbf{CON}: #1}}
+\newcommand{\TODOfig}[1]{\todo[inline, \bg=orange]{\textbf{FIG}: #1}}
+% =========================== Shortcuts ===========================
+
+\documentclass{article}
+\title{\vspace{-3cm} \\ \myTitle}
+\author{\myAuthor}
+\date{\myDateUpdated}
+
+\usepackage[colorinlistoftodos]{todonotes}	% Used for "to do" notes
+\usepackage{amssymb}	% Used for math symbols
+\usepackage{comment}	% Used for the 'comment' environment (multi-line)
+\usepackage{enumitem}	% Used for enumalpha environment
+\usepackage{float}		% Used for ``H'' flag in figure environment
+\usepackage{graphicx}   % Used for adding images
+\usepackage{listings}   % Used for blocks of code
+\usepackage{longtable}	% Used to format longtables properly
+\usepackage{multirow}
+\usepackage{schedule}	% Used to make the schedule
+\usepackage{xcolor}
+
+\usepackage{hyperref}   % Used for adding PDF metadata
+
+\graphicspath{{./}}     % Import images that are in the same folder as this .tex file
+
+\hypersetup{
+    colorlinks=true,
+	urlcolor=black,		% URL colors (\href{}{})
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
+    pdfborder={0 0 0},
+    pdftitle={\myTitle},
+    pdfauthor={\myAuthor},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
+}
+
+\lstset{        % Coding block configuration
+  basicstyle=\ttfamily,
+  frame=single,
+  breaklines=true
+}
+
+% Prevent word hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}        % Official beginning of the document.
+\pagenumbering{roman}   % Use roman numbers before content
+\maketitle              % Make title page
+\pagenumbering{arabic}  % Brings the normal numbers back
+
+\CellHeight{.4in}
+\CellWidth{1in}
+\TimeRange{8:00-19:00}
+\SubUnits{30}
+\BeginOn{Monday}
+% \TextSize{\tiny}
+\FiveDay
+\TwelveHour
+\NewAppointment{LECT}{pink}{black}
+\NewAppointment{TUTR}{lightgray}{black}
+\NewAppointment{LAB}{lightgray}{black}
+
+\begin{schedule}[Fall Quarter, 1997]
+	% NOTE: CLASSES START
+	% NOTE: CLASSES END
+	\LECT{\href{https://google.com}{EECS 1001}}{LECT}{M,W,F}{10:00-11:30}
+	\TUTR{Moral Philosophy}{HOB2 233}{M}{14:00-16:50}
+	\class{Math Logic}{EIC 128}{T,Th}{11:00-12:20}
+	\class{Critical Reasoning}{SSL 290}{M,W,F}{13:00-13:50}
+	\tutorial{Departmental Meeting}{HOB2 233}{W}{12:00-12:50}
+	\tutorial{Crit. Reas. Workshop}{HOB2 233}{T}{13:00-13:50}
+	\class{Office Hours}{HOB2 210}{W,F}{14:00-14:50}
+\end{schedule}
+
+
+\begin{comment}
+	TODO commands (using the todonotes package):
+	\TODO{}			-> Normal
+	\TODOimg{}		-> Insert image
+	\TODOcontent{}	-> Insert more content here
+	\TODOfig{}		-> Insert figure
+\end{comment}
+\end{document}

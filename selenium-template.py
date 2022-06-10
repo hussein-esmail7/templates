@@ -37,9 +37,8 @@ color_white             = '\033[97m'
 color_grey              = '\033[98m'
 
 # ========= COLORED STRINGS =========
-str_prefix_q            = f"[{color_pink}Q{color_end}]"
+str_prefix_q            = f"[{color_pink}Q{color_end}]\t "
 str_prefix_y_n          = f"[{color_pink}y/n{color_end}]"
-str_prefix_ques         = f"{str_prefix_q}\t "
 str_prefix_err          = f"[{color_red}ERROR{color_end}]\t "
 str_prefix_done         = f"[{color_green}DONE{color_end}]\t "
 str_prefix_info         = f"[{color_cyan}INFO{color_end}]\t "

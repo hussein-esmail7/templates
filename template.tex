@@ -20,24 +20,23 @@
 
 % =========================== Shortcuts ===========================
 \def\bg{backgroundcolor}
+\def\ra{\rightarrow}
 \def\len{\setlength}
-\newcommand{\image}[1]{[\textbf{IMAGE MISSING #1}]} % #1 is the descriptor about the image
-\newenvironment{itemize*}{\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{itemize}}
-\newenvironment{enumerate*}{\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
-\newenvironment{enumalph*}{\begin{enumerate}[label=\alph*.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
-\newenvironment{enumq*}{\begin{enumerate}[label=Q{{\arabic*}}.]\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}{\end{enumerate}}
-\newcommand{\TODO}[1]{\todo[backgroundcolor=none, linecolor=red]{#1}}
-\newcommand{\TODOimg}[1]{\todo[inline, \bg=gray]{\textbf{IMG}: #1}}
-\newcommand{\TODOcontent}[1]{\todo[\bg=red, linecolor=red]{\textbf{CON}: #1}}
-\newcommand{\TODOfig}[1]{\todo[inline, \bg=orange]{\textbf{FIG}: #1}}
+\newenvironment{itemize*}{\begin{itemize}[wide, nosep, topsep=5px, leftmargin=30pt, labelsep=5pt, parskip=0pt, itemsep=0pt]}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}[itemsep=0pt, parskip=0pt]}{\end{enumerate}}
+\newenvironment{enumalph*}{\begin{enumerate}[itemsep=0pt, parskip=0pt, label=\alph*.]}{\end{enumerate}}
+\newenvironment{enumq*}{\begin{enumerate}[itemsep=0pt, parskip=0pt, label=Q{{\arabic*}}.]}{\end{enumerate}}
+\newcommand{\TODO}[1]{\todo[inline, \bg=lightgray, linecolor=red]{#1}}
 % =========================== Shortcuts ===========================
 
 \documentclass{article}
-\title{\vspace{-3cm} \\ \myTitle}
+\title{\myTitle}
 \author{\myAuthor}
 \date{\myDateUpdated}
 
 \usepackage[colorinlistoftodos]{todonotes}	% Used for "to do" notes
+\usepackage[many]{tcolorbox}    	% Used for Notebook page boxes
+\usepackage[margin=1in]{geometry} % 1-inch margins
 \usepackage{amssymb}	% Used for math symbols
 \usepackage{comment}	% Used for the 'comment' environment (multi-line)
 \usepackage{enumitem}	% Used for enumalpha environment
@@ -46,8 +45,32 @@
 \usepackage{listings}   % Used for blocks of code
 \usepackage{longtable}	% Used to format longtables properly
 \usepackage{multirow}
-\usepackage{qrcode}
 \usepackage{xcolor}
+
+% N BOX START ----------------
+\definecolor{main}{HTML}{5989cf}    % setting main color to be used
+\definecolor{sub}{HTML}{cde4ff}     % setting sub color to be used
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0cm,    % add extra space before the box
+    after skip = 0cm      % add extra space after the box
+}                           % setting global options for tcolorbox
+\newtcolorbox{nbox}{
+	hbox,				% If this line is here, box only spans for the text
+						% that's inside the box if it's smaller than
+						% \textwidth
+    colback = sub,		% Set main background colour
+    colframe = main,	% Set background colour
+	top = 1pt,			% Top margin
+	bottom = 1pt,		% Bottom margin
+	left = 3pt,			% Left margin
+	right = 3pt,		% Right margin
+	boxrule = 0pt,		% Overall border weight (set to none)
+    leftrule = 3pt		% left rule weight
+}
+\newcommand{\npage}[1]{\begin{nbox}#1\end{nbox}}
+% N BOX END ----------------
 
 \usepackage{hyperref}   % Used for adding PDF metadata
 
@@ -77,40 +100,30 @@
 \hbadness=10000
 
 \begin{document}        % Official beginning of the document.
-\pagenumbering{roman}   % Use roman numbers before content
+\pagenumbering{roman}   % Use roman numerals for table of contents section
 \maketitle              % Make title page
-\begin{center}
-	\qrcode[hyperlink]{}
-\end{center}
 \tableofcontents        % Makes TOC
-% \newpage
-% \listoffigures			% Makes ``List of Figures''
+% todonotes part (Start) ------------------------------------------------------
 \todototoc				% Add "Todo list" to main TOC
-\listoftodos			% Show all todo notes (from todonotes package) as index
+\listoftodos			% Show all todo notes as a list to see what's remaining
+% todonotes part (End) --------------------------------------------------------
 \hypersetup{linkcolor=blue} % Any links to other sections are now blue
-\newpage                % Insert a page break
-\pagenumbering{arabic}  % Brings the normal numbers back
+\newpage                % Page break
+\pagenumbering{arabic}
 \flushleft
 
 \section{Introduction}
 \TODO{Purpose of document}
 
-At the time of writing this document, all URLs in this document are correct.
-Should you have any issues, please
-\underline{\href{mailto:HusseinEsmailContact@gmail.com}
-{feel free to send me an email}}.
+% Notebook page example:
+% \npage{N10-P001}
 
-\section{How This Guide is Formatted}
-This guide is made using \LaTeX{}, a typesetting document format, mainly used
-for large documents like STEM documents, theses, and research papers. To read
-more about what I think about \LaTeX{}, you
-\href{https://husseinesmail.xyz/articles/is-latex-better.html}{can go here}.
+\section{Next section...}
+\TODO{Rest of document}
 
 \begin{comment}
 	TODO commands (using the todonotes package):
-	\TODO{}			-> Normal
-	\TODOimg{}		-> Insert image
-	\TODOcontent{}	-> Insert more content here
-	\TODOfig{}		-> Insert figure
+	\todo{}			-> todonotes default
+	\TODO{}			-> Gray inline box
 \end{comment}
 \end{document}

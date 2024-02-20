@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>[RSS FEED TITLE]</title>
+    <link rel="self" href="[LINK TO THIS RSS]" type="application/atom+xml" />
+    <link rel="alternate" href="[LINK ALTERNATE]" type="text/html" />
+    <description>[RSS DESCRIPTION]</description>
+    <!-- Template:
+    <item>
+      <title>TODO</title>
+      <link>[LINK TO THIS POST]</link>
+      <author>[AUTHOR]</author>
+      <guid>[GUID]</guid>
+      <description>[CONTENT]</description>
+      
+    </item>
+
+    -->
+    <!-- FEEDS START -->
+    <item>
+      <title>Adobe Dreamweaver</title>
+      <link>http://shopping.yahoo.com/search?p=web%20design</link>
+      <description>This tells you how much it cost and what it is
+      for.</description>
+    </item>
+    <item>
+      <title>Frontpage 2003 upgrade</title>
+      <link>
+      http://www.softwaremedia.com/microsoft/frontpage/frontpage-
+      2003-upgrade.html?ovchn=PGR&amp;ovcrn=39202323&amp;ovtac=CMP&amp;ovcpn=frontpage-2003---upgrade</link>
+      <description>THis is to help build a better web
+      site.</description>
+    </item>
+    <item>
+      <title>WebPlus X4 Website Maker Mini Box</title>
+      <link>
+      http://accessories.us.dell.com/sna/productdetail.aspx?sku=A3310055&amp;cs=04&amp;c=us&amp;l=en&amp;dgc=SS&amp;cid=52102&amp;lid=1342490</link>
+      <description>It helps you to make websites</description>
+    </item>
+  </channel>
+</rss>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <category term="[TERM]" label="[RSS FEED TITLE]"/>
+	<updated>[TIME UPDATED]</updated> <!-- TIME UPDATED --> <!-- Ex: 2021-05-03T15:05:35+00:00 -->
+    <!-- <icon></icon> -->
+    <!-- <id></id> -->
+    <link rel="self" href="[LINK TO THIS RSS]" type="application/atom+xml" />
+    <link rel="alternate" href="[LINK ALTERNATE]" type="text/html" />
+    <!-- <logo></logo> -->
+    <subtitle>[RSS DESCRIPTION]</subtitle>
+    <title>[RSS FEED TITLE]</title>
+    
+    <!-- Template:
+    <entry>
+        <title>TODO</title>
+        <published>[TIME CREATED]</published>
+        <updated>[TIME UPDATED]</updated>
+        <link href="[LINK TO THIS POST]"/>
+        <author>
+            <name>[AUTHOR]</name>
+        </author>
+        <category term="[TERM]" label="[RSS FEED TITLE]"/>
+        <content type="html">
+            [CONTENT]
+        </content>
+    </entry>
+    -->
+
+    <!-- FEEDS START -->
+	
+</feed>

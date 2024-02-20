@@ -32,6 +32,7 @@ str_prefix_y_n          = f"[{color_pink}y/n{color_end}]"
 str_prefix_err          = f"[{color_red}ERROR{color_end}]\t "
 str_prefix_done         = f"[{color_green}DONE{color_end}]\t "
 str_prefix_info         = f"[{color_cyan}INFO{color_end}]\t "
+error_neither_y_n = f"{str_prefix_err} Please type 'yes' or 'no'"
 
 
 def yes_or_no(str_ask):

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>[RSS FEED TITLE]</title>
-    <link rel="self" href="[LINK TO THIS RSS]" type="application/atom+xml" />
-    <link rel="alternate" href="[LINK ALTERNATE]" type="text/html" />
+    <link>[LINK TO THIS RSS]</link>
     <description>[RSS DESCRIPTION]</description>
     <!-- Template:
     <item>

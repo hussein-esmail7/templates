@@ -12,31 +12,9 @@
       <author>[AUTHOR]</author>
       <guid>[GUID]</guid>
       <description>[CONTENT]</description>
-      
     </item>
-
     -->
     <!-- FEEDS START -->
-    <item>
-      <title>Adobe Dreamweaver</title>
-      <link>http://shopping.yahoo.com/search?p=web%20design</link>
-      <description>This tells you how much it cost and what it is
-      for.</description>
-    </item>
-    <item>
-      <title>Frontpage 2003 upgrade</title>
-      <link>
-      http://www.softwaremedia.com/microsoft/frontpage/frontpage-
-      2003-upgrade.html?ovchn=PGR&amp;ovcrn=39202323&amp;ovtac=CMP&amp;ovcpn=frontpage-2003---upgrade</link>
-      <description>THis is to help build a better web
-      site.</description>
-    </item>
-    <item>
-      <title>WebPlus X4 Website Maker Mini Box</title>
-      <link>
-      http://accessories.us.dell.com/sna/productdetail.aspx?sku=A3310055&amp;cs=04&amp;c=us&amp;l=en&amp;dgc=SS&amp;cid=52102&amp;lid=1342490</link>
-      <description>It helps you to make websites</description>
-    </item>
   </channel>
 </rss>
 

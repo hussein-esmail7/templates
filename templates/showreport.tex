@@ -1,0 +1,177 @@
+% showreport.tex
+% Author: Hussein Esmail
+% Created: 2025 02 18
+% Updated: 2025 02 18
+% Description: [DESCRIPTION]
+
+% This part is used for https://github.com/hussein-esmail7/template-maker
+% templateDescription: 9 - Theatre Show Report Template
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% =========================== Variables ===========================
+\def\myAuthor			{Hussein Esmail} % Author of this file
+\def\mySubject			{PDF Subject Here}  % Used for Metadata
+\def\myKeywords			{PDF Keywords Here} % Separated by comma
+\def\myDateUpdated		{\today}
+\def\myTitle			{showreport}
+\newcommand{\showDate}{\todo{}}
+\newcommand{\showName}{\todo{}} % Performer group name
+\newcommand{\showContact}{\todo{}, \href{mailto:\todo{}}{\todo{}}} % Contact info (1 person)
+\newcommand{\showVenue}{\todo{}} % Performance Hall or Brevik Hall, or address
+\newcommand{\showPreEvent}{\todo{}} % Preshow event details
+\newcommand{\showPostEvent}{\todo{}} % Postshow event details
+\newcommand{\weather}{\todo{}, \todo{}$^{\circ}$C} % Weather on day of
+% =========================== Variables ===========================
+
+% =========================== Shortcuts ===========================
+\def\bg{backgroundcolor}
+\def\ra{\rightarrow}
+\def\len{\setlength}
+\newenvironment{itemize*}{\begin{itemize}[wide, nosep, topsep=5px, leftmargin=30pt, labelsep=5pt, parskip=0pt, itemsep=0pt]}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}[itemsep=0pt, parskip=0pt]}{\end{enumerate}}
+\newenvironment{enumalph*}{\begin{enumerate}[itemsep=0pt, parskip=0pt, label=\alph*.]}{\end{enumerate}}
+\newenvironment{enumq*}{\begin{enumerate}[itemsep=0pt, parskip=0pt, label=Q{{\arabic*}}.]}{\end{enumerate}}
+% =========================== Shortcuts ===========================
+
+\documentclass{article}
+
+\usepackage[colorinlistoftodos]{todonotes}	% Used for "to do" notes
+\usepackage[margin=1in]{geometry} % 1-inch margins
+\usepackage{amssymb}	% Used for math symbols
+\usepackage{comment}	% Used for the 'comment' environment (multi-line)
+\usepackage{datetime}
+\usepackage{enumitem}	% Used for enumalpha environment
+\usepackage{fancyhdr}
+\usepackage{float}		% Used for ``H'' flag in figure environment
+\usepackage{graphicx}   % Used for adding images
+\usepackage{hanging}
+\usepackage{lastpage}
+\usepackage{longtable}	% Used to format longtables properly
+\usepackage{multicol} % Used to put figures side by side
+\usepackage{multirow}
+\usepackage{xcolor}
+
+\usepackage{hyperref}   % Used for adding PDF metadata
+
+\graphicspath{{./}}     % Import images in the same folder as this .tex file
+
+\hypersetup{
+    colorlinks=true,
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
+    pdfborder={0 0 0},
+    pdftitle={\myTitle},
+    pdfauthor={\myAuthor},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
+}
+
+\title{\myTitle}
+\author{\myAuthor}
+\newdateformat{specialdate}{\THEYEAR\ \twodigit{\THEMONTH}\ \twodigit{\THEDAY}\ (\shortdayofweekname{\THEDAY}{\THEMONTH}{\THEYEAR})}
+\date{\specialdate\today}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % No lines when using fancyhdr
+\fancyhead[]{ }
+\fancyfoot{ }
+\fancyfoot[RO]{Page \thepage\ of \textcolor{black}{\pageref*{LastPage}}}
+\fancyfoot[LE]{Page \thepage\ of \textcolor{black}{\pageref*{LastPage}}}
+
+% Prevent word hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}        % Official beginning of the document.
+% \pagenumbering{roman}   % Use roman numerals for table of contents section
+% \maketitle              % Make title page
+\thispagestyle{fancy}	% So that the new page number style applies to page 1
+% \tableofcontents        % Makes TOC
+\hypersetup{linkcolor=blue} % Any links to other sections are now blue
+\pagenumbering{arabic}
+\flushleft
+\hangpara{3em}{1} % Indent paragraphs how I do on paper
+
+\section{Performance Information}
+Prepared by: \myAuthor{} \\
+Date Prepared: \todo{}
+
+\begin{table}[h]
+	\begin{tabular}{|r|l|}
+		\hline Performance Name & \showName{} \\
+		\hline Date: & \showDate{} \\
+		\hline Contact: & \showContact{} \\
+		\hline Venue: & \showVenue{} \\
+		\hline Event Timing: & See reverse. \\
+		\hline Event Set Up Notes: & N/A \\
+		\hline Pre-show Event: & \showPreEvent{} \\
+		\hline Post-show Event: & \showPostEvent{} \\
+		\hline Event Details: & Weather: \weather{} \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\section{Staff Schedule}
+\begin{table}[h]
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline \textbf{Position} & \textbf{Name} & \textbf{In} & \textbf{Out} & \textbf{Break} & \textbf{Notes}\\
+		\hline Sound	& \todo{} & \todo{} & \todo{} & \todo{} & \todo{} \\
+		\hline Light	& \todo{} & \todo{} & \todo{} & \todo{} & \todo{} \\
+		\hline FOH		& \todo{} & \todo{} & \todo{} & \todo{} & \todo{} \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\section{Feedback}
+Would you host this event again (Y/N)? Why or why not?
+
+\todo{}
+
+\clearpage
+\section{Run Times}
+Update with \underline{actual} timings during the event \\
+\begin{table}[h]
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline & \multicolumn{2}{c|}{\textbf{Projected}} & \multicolumn{2}{c|}{\textbf{Actual}} & \textbf{Notes} \\
+		\hline Start Travel			& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Tech Set Up			& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Client Arrival		& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Doors				& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Introductions		& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Act 1				& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Intermission			& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Act 2				& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Post-show Event		& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Audience Load Out	& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Client Load Out		& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline Tech Load Out		& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline End Travel			& \todo{} & \todo{} & \todo{} & \todo{} & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\clearpage
+\section{Mileage}
+\begin{multicols}{2}
+\begin{figure}[H]
+	\centering
+	\caption{Start Travel}
+	\includegraphics[width=0.5\textwidth]{travel1}
+\end{figure}
+\columnbreak
+\begin{figure}[H]
+	\centering
+	\caption{End Travel}
+	\includegraphics[width=0.5\textwidth]{travel2}
+\end{figure}
+\end{multicols}
+
+\section{Notes}
+\begin{itemize*}
+	\item No notes.
+\end{itemize*}
+
+\end{document}

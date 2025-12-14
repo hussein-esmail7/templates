@@ -3,16 +3,19 @@
 [AUTHOR]
 Created: [DATE]
 Updated: [DATE]
-Description: [DESCRIPTION]
+Description: [DESCRIPTION] # TODO
 '''
 
 # This part is used for https://github.com/hussein-esmail7/template-maker
-# templateDescription: Python Programming Document
+# templateDescription: Python Programming Document Without Config
 
 import os
 import sys
+import argparse
 
 # ========= VARIABLES ===========
+PROGRAM_NAME = "FILL IN PROGRAM NAME HERE" # TODO
+__version__ = "0.1.0"
 
 # ========= COLOR CODES =========
 color_end               = '\033[0m'
@@ -47,11 +50,71 @@ def yes_or_no(str_ask):
         else:
             print(f"{str_prefix_err} {error_neither_y_n}")
 
+def parse_args(argv=None):
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(
+        prog=PROGRAM_NAME,
+        description="Short description of your command-line tool." # TODO
+    )
 
-def main():
+    # Positional arguments
+    parser.add_argument(
+        "input",
+        nargs="?",
+        help="Input file or value"
+    )
+
+    # Optional arguments
+    parser.add_argument(
+        "-o", "--output",
+        help="Output file path"
+    )
+
+    parser.add_argument(
+        "-V", "--verbose",
+        action="store_true",
+        help="Enable verbose output"
+    )
+
+    # Version flag
+    parser.add_argument(
+        "-v", "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
+        help="Display version number"
+    )
+
+    return parser.parse_args(argv)
+
+
+
+def main(argv=None):
+    args = parse_args(argv)
+    
+    if args.verbose:
+        # A better solution over a 'bool_prints' variable
+        print("Verbose mode enabled", file=sys.stderr)
+
+    if args.input:
+        if args.verbose:
+            print(f"Input: {args.input}", file=sys.stderr)
+    else:
+        print("No input provided", file=sys.stderr)
+
+    if args.output and args.verbose:
+        print(f"Output will be written to: {args.output}", file=sys.stderr)
+
     # CODE HERE
-    sys.exit()
+    # result = do_work(args.input)
+    # NOTE: variables with a single underscore as its first character are not
+    # copied over if this program is imported into something else. Ex. _array2
+    # vs array2
+
+    print(args)
+
+    return 0 # Completed successfully
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
+    # Exit the program, returning the return code of main() - can be 1, 0, etc

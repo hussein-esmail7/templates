@@ -45,17 +45,14 @@
 \usepackage{hanging}
 \usepackage{xcolor}
 
-\usepackage{hyperref}   % Used for adding PDF metadata
-
 \graphicspath{{./}}     % Import images in the same folder as this .tex file
 
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
 \hypersetup{
     colorlinks=true,
 	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
 	linkcolor=black,	% Table of Contents text color. Used for TOC body only
     pdfborder={0 0 0},
-    pdftitle={\myTitle},
-    pdfauthor={\myAuthor},
     pdfsubject={\mySubject},
     pdfkeywords={\myKeywords}
 }

@@ -19,23 +19,27 @@
 % \date{[DATE]}
 
 \usepackage{qrcode}		% Used for generating the QR code
-\usepackage{hyperref}   % Used for adding PDF metadata
 
+\usepackage{coolertitles}   % Used locally
+\usepackage{npage}			% Used locally
+
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
 \hypersetup{
     colorlinks=true,
-	urlcolor=black,		% URL colors (\href{}{}) and QR codes of URLs
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
 	linkcolor=black,	% Table of Contents text color. Used for TOC body only
     pdfborder={0 0 0},
-    pdftitle={\myTitle},
-    pdfauthor={\myAuthor},
     pdfsubject={\mySubject},
     pdfkeywords={\myKeywords}
 }
 
 \begin{document}        % Official beginning of the document.
+\titlenew				% from coolertitles package
+\pagenumbers			% from coolertitles package
+
 \maketitle              % Make title page
-\pagenumbering{gobble}  % Sets to no page numbering
-% \pagenumbering{arabic}  % Brings the normal numbers back
+% \pagenumbering{gobble}  % Sets to no page numbering
+\pagenumbering{arabic}  % Brings the normal numbers back
 
 \hypersetup{linkcolor=black} % Any links to other sections are now black
 \centering

@@ -29,7 +29,18 @@
 \usepackage{tikz}
 \usepackage{xcolor}
 
-\usepackage{hyperref}   % Used for adding PDF metadata
+\usepackage{coolertitles}   % Used locally
+\usepackage{npage}			% Used locally
+
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
+\hypersetup{
+    colorlinks=true,
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
+    pdfborder={0 0 0},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
+}
 
 \graphicspath{{./}}     % Import images in the same folder as this .tex file
 
@@ -37,7 +48,10 @@
 \author{\myAuthor}
 
 \begin{document}			% Official beginning of the document.
-\pagenumbering{gobble}		% No page numbers
+\titlenew				% from coolertitles package
+\pagenumbers			% from coolertitles package
+% \pagenumbering{gobble}		% No page numbers
+\pagenumbering{arabic}
 
 \begin{figure}[h!]
 	\centering

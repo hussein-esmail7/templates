@@ -32,37 +32,27 @@
 \author{\myAuthor}
 \date{\myDate}
 
-\usepackage{hyperref}   % Used for adding PDF metadata
 \usepackage{listings}   % Used for blocks of code
 \usepackage{graphicx}   % Used for adding images
-\usepackage{listings}   % Used for blocks of code
+
+\usepackage{coolertitles}   % Used locally
+\usepackage{npage}			% Used locally
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
 \hypersetup{
     colorlinks=true,
-	urlcolor=blue,			% URL colors (\href{}{})
-	linkcolor=black,		% TOC colors
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
     pdfborder={0 0 0},
-    pdftitle={\myTitle},
-    pdfauthor={\myAuthor},
     pdfsubject={\mySubject},
     pdfkeywords={\myKeywords}
 }
 
-\lstset{        % Coding block configuration
-  basicstyle=\ttfamily,
-  frame=single,
-  breaklines=true
-}
-
-% Prevent word hyphenation
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-
 \begin{document}        % Official beginning of the document.
+\titlenew				% from coolertitles package
+\pagenumbers			% from coolertitles package
 % \pagenumbering{roman}   % Use roman numbers before the start of the script so that page numbers are the same as the real script
 \maketitle              % Make title page
 \newpage                % Insert a page break

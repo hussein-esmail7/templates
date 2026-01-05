@@ -64,12 +64,15 @@
 
 % ======================== Configurations ========================
 \documentclass{article}
-\usepackage{hyperref}       % Used for adding PDF metadata
 \usepackage{multirow}       % Multiple rows/columns in table
 \usepackage{longtable}      % Tables that can go past 1 page
 \usepackage{fancyhdr}       % Used for page numbers on RS
 \usepackage{setspace}		% Used to change line spacing
 \usepackage{ifthen}			% Used for booleans
+
+\usepackage{coolertitles}   % Used locally
+\usepackage{npage}			% Used locally
+
 \setlength\parindent{0pt}   % Paragraph indent to 0
 \pagestyle{fancy}           % Turn on the style
 \fancyhead{}                % Clear the header and footer
@@ -81,12 +84,14 @@
 \title{\vspace{-3cm} \\ \myTitle} % Title  = stored variable
 \author{\myAuthor}          % Author = stored variable
 \date{\myDate}              % Date   = stored variable
-\hypersetup{colorlinks=false,
-	pdfborder={0 0 0},
-	pdftitle={\myTitle},
-	pdfauthor={\myAuthor},
-	pdfsubject={\mySubject},
-	pdfkeywords={\myKeywords}
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
+\hypersetup{
+    colorlinks=true,
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
+    pdfborder={0 0 0},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
 }							% PDF metadata
 % Prevent word hyphenation
 \tolerance=1
@@ -138,6 +143,8 @@
 % ======================= Shortcut Commands =======================
 
 \begin{document}        % Official beginning of the document.
+\titlenew				% from coolertitles package
+\pagenumbers			% from coolertitles package
 \pagenumbering{roman}   % Use roman numbers before the start of the script so
 						% that page numbers are the same as the real script
 \maketitle              % Make title page

@@ -51,17 +51,17 @@
 \usepackage{schedule}	% Used to make the schedule
 \usepackage{xcolor}
 
-\usepackage{hyperref}   % Used for adding PDF metadata
+\usepackage{coolertitles}   % Used locally
+\usepackage{npage}			% Used locally
 
 \graphicspath{{./}}     % Import images that are in the same folder as this .tex file
 
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
 \hypersetup{
     colorlinks=true,
-	urlcolor=black,		% URL colors (\href{}{})
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
 	linkcolor=black,	% Table of Contents text color. Used for TOC body only
     pdfborder={0 0 0},
-    pdftitle={\myTitle},
-    pdfauthor={\myAuthor},
     pdfsubject={\mySubject},
     pdfkeywords={\myKeywords}
 }
@@ -79,6 +79,8 @@
 \hbadness=10000
 
 \begin{document}        % Official beginning of the document.
+\titlenew				% from coolertitles package
+\pagenumbers			% from coolertitles package
 \pagenumbering{roman}   % Use roman numbers before content
 \maketitle              % Make title page
 \pagenumbering{arabic}  % Brings the normal numbers back

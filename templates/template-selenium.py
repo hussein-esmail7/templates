@@ -56,6 +56,12 @@ def main():
     # Example of getting elements by XPATH
     # time_unformatted = driver.find_element(By.XPATH, '//time/span[1]').text + " /" + driver.                find_element(By.XPATH, '//time/span[2]').text¬
 
+    dummy = input("Program is up to date. Press enter to quit > ")
+    # Put this line where you need to have time to inspect the site
+    # If printing information to process, print it before this 'dummy' line.
+    # The final finished program should not have this line by the time you're
+    # dont writing it, only for purposes while writing the program
+
     # Cleanup
     driver.close()  # Close the browser
     options.extensions.clear() # Clear the options that were set

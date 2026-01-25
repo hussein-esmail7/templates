@@ -53,8 +53,23 @@ def main():
     driver.get(target_site)
 
     # ADDITIONAL CODE HERE
-    # Example of getting elements by XPATH
-    # time_unformatted = driver.find_element(By.XPATH, '//time/span[1]').text + " /" + driver.                find_element(By.XPATH, '//time/span[2]').text¬
+    # Example of getting elements by XPATH -----------------------------------
+    # ITEM = driver.find_element(By.XPATH, '//time/span[1]')        # singular
+    # ITEM = driver.find_elements(By.XPATH, '//time/span[1]')        # n items
+    # Example of getting elements by CLASS_NAME ------------------------------
+    # ITEM = driver.find_element(By.CLASS_NAME, 'schedule')         # singular
+    # ITEM = driver.find_elements(By.CLASS_NAME, 'schedule')         # n items
+    # Example of getting elements by ID --------------------------------------
+    # ITEM = driver.find_element(By.ID, 'schedule')                 # singular
+    # ITEM = driver.find_elements(By.ID, 'schedule')                 # n items
+    # Example of getting elements by TAG_NAME --------------------------------
+    # ITEM = driver.find_element(By.TAG_NAME, 'div')                # singular
+    # ITEM = driver.find_elements(By.TAG_NAME, 'div')                # n items
+    # Example of getting text from an element --------------------------------
+    # ITEM = driver.find_element(By.CLASS_NAME, 'schedule').text
+    # NOTE: If .text is run on a list, it may give an error or parse the entire
+    #   thing by itself. Best to run this in a loop if doing it for every
+    #   element.
 
     dummy = input("Program is up to date. Press enter to quit > ")
     # Put this line where you need to have time to inspect the site

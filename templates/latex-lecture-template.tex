@@ -1,23 +1,30 @@
-% TODO: THIS TEMPLATE IS A WORK IN PROGRESS
-
 % [FILENAME]
 % Author: [AUTHOR]
 % Created: [DATE]
 % Updated: [DATE]
-% Description: [DESCRIPTION]
+% Description: [DESC]
 
 % This part is used for https://github.com/hussein-esmail7/template-maker
-% templateDescription: 7 - Timetable Schedule LaTeX Template
+% templateDescription: 2 - LaTeX School Course Lecture Notes Template
 
 % This file can be found at https://github.com/hussein-esmail7/templates
 
 % =========================== Variables ===========================
-\def\myAuthor			{[AUTHOR]} % Author of this file
-\def\mySubject			{PDF Subject Here}  % Used for Metadata
-\def\myKeywords			{PDF Keywords Here} % Separated by comma
-\def\myDateCreated		{[DATE]}
-\def\myDateUpdated		{\today}
-\def\myTitle			{[FILE FRONT]}
+\def\myAuthor              {[AUTHOR]} % Author of the show
+\def\mySubject             {[SUBJ]}
+\def\myKeywords            {[KEYWORDS]} % Separated by comma
+\def\myCourseDateCreated   {[DATE]}
+\def\myCourseDateUpdated   {\today}
+\def\myCourseCredits       {[COURSE-CREDITS]}
+\def\myCourseCode          {[COURSE-CODE]}
+\def\myCourseTitle         {[COURSE-TITLE]}
+\def\myCourseProf          {[COURSE-PROF]}    % First Last only
+\def\Prof				   {[PROF]}    % First name only
+\def\myCourseSemester      {[COURSE-SEMESTER]} % Ex. 2019F
+\def\myCourseSchedule      {[COURSE-SCHEDULE]} % Ex. MWF 9:00
+\def\myCourseSection       {[COURSE-SECTION]} % Single letter
+\def\myCourseLocation      {[COURSE-LOCATION]}
+\def\myTitle{\myCourseCode{} \myCourseCredits{}: \myCourseTitle{} \\ \myCourseSemester{} - \myCourseSchedule{}}
 % =========================== Variables ===========================
 
 % =========================== Shortcuts ===========================
@@ -37,7 +44,7 @@
 \documentclass{article}
 \title{\vspace{-3cm} \\ \myTitle}
 \author{\myAuthor}
-\date{\myDateUpdated}
+\date{\myCourseDateUpdated}
 
 \usepackage[colorinlistoftodos]{todonotes}	% Used for "to do" notes
 \usepackage{amssymb}	% Used for math symbols
@@ -48,7 +55,6 @@
 \usepackage{listings}   % Used for blocks of code
 \usepackage{longtable}	% Used to format longtables properly
 \usepackage{multirow}
-\usepackage{schedule}	% Used to make the schedule
 \usepackage{xcolor}
 
 \usepackage{coolertitles}   % Used locally
@@ -83,32 +89,57 @@
 \pagenumbers			% from coolertitles package
 \pagenumbering{roman}   % Use roman numbers before content
 \maketitle              % Make title page
+\tableofcontents        % Makes TOC
+\newpage
+\listoffigures			% Makes ``List of Figures''
+\todototoc				% Add "Todo list" to main TOC
+\listoftodos			% Show all todo notes (from todonotes package) as index
+\hypersetup{linkcolor=blue} % Any links to other sections are now blue
+\newpage                % Insert a page break
 \pagenumbering{arabic}  % Brings the normal numbers back
 
-\CellHeight{.4in}
-\CellWidth{1in}
-\TimeRange{8:00-19:00}
-\SubUnits{30}
-\BeginOn{Monday}
-% \TextSize{\tiny}
-\FiveDay
-\TwelveHour
-\NewAppointment{LECT}{pink}{black}
-\NewAppointment{TUTR}{lightgray}{black}
-\NewAppointment{LAB}{lightgray}{black}
+\section{Introduction}
+This PDF is the collection of my lecture notes for \myCourseCode{} that took
+place during the \myCourseSemester{} semester. This was taught by
+\myCourseProf{} for section \myCourseSection{}. This occurs on:
+\myCourseSchedule{} at \myCourseLocation{}.
 
-\begin{schedule}[Fall Quarter, 1997]
-	% NOTE: CLASSES START
-	% NOTE: CLASSES END
-	\LECT{\href{https://google.com}{EECS 1001}}{LECT}{M,W,F}{10:00-11:30}
-	\TUTR{Moral Philosophy}{HOB2 233}{M}{14:00-16:50}
-	\class{Math Logic}{EIC 128}{T,Th}{11:00-12:20}
-	\class{Critical Reasoning}{SSL 290}{M,W,F}{13:00-13:50}
-	\tutorial{Departmental Meeting}{HOB2 233}{W}{12:00-12:50}
-	\tutorial{Crit. Reas. Workshop}{HOB2 233}{T}{13:00-13:50}
-	\class{Office Hours}{HOB2 210}{W,F}{14:00-14:50}
-\end{schedule}
+At the time of writing this document, all URLs in this document are correct.
+Should you have any issues, please
+\underline{\href{mailto:HusseinEsmailContact@gmail.com}{feel free to send me an
+email}}.
 
+\section{How This Guide is Formatted}
+This guide is made using \LaTeX{}, a typesetting document format, mainly used
+for large documents like STEM documents, theses, and research papers. To read
+more about what I think about \LaTeX{}, you
+\href{https://husseinesmail.xyz/articles/is-latex-better.html}{can go here}.
+
+% TODO: Lecture notes here
+
+\begin{comment}
+% Lecture template
+\section{Lecture NUM: DATE}
+\begin{itemize*}
+    \item NOTES HERE
+\end{itemize*}
+\end{comment}
+
+\begin{comment}
+% Tutorial template
+\section{Tutorial NUM: DATE}
+\begin{itemize*}
+    \item NOTES HERE
+\end{itemize*}
+\end{comment}
+
+\begin{comment}
+% Lab template
+\section{Lab NUM: DATE}
+\begin{itemize*}
+    \item NOTES HERE
+\end{itemize*}
+\end{comment}
 
 \begin{comment}
 	TODO commands (using the todonotes package):
@@ -117,4 +148,4 @@
 	\TODOcontent{}	-> Insert more content here
 	\TODOfig{}		-> Insert figure
 \end{comment}
-\end{document}
+\end{document} % Official end of the document.

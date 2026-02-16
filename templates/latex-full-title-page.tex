@@ -1,0 +1,44 @@
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This part is used for https://github.com/hussein-esmail7/template-maker
+% templateDescription: 4 - LaTeX Full Title Page
+% Originally from: https://www.latextemplates.com/template/vertical-line-title-page
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% =========================== Variables ===========================
+\def\myAuthor			{[AUTHOR]} % Author of this file
+\def\mySubject			{PDF Subject Here}  % Used for Metadata
+\def\myKeywords			{PDF Keywords Here} % Separated by comma
+\def\myDateUpdated		{\today}
+\def\myTitle			{[FILE FRONT]}
+\def\mySubtitleNotes	{} % Additional notes at bottom of page
+% =========================== Variables ===========================
+
+\documentclass[a4paper, 11pt]{book} % A4/Letter paper size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\begin{document}
+
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	\raggedleft % Right align the title page
+	\rule{1pt}{\textheight} % Vertical line
+	\hspace{0.05\textwidth} % Whitespace between the vertical line and page text
+	\parbox[b]{0.75\textwidth}{ % Paragraph box for holding the title page text, adjust the width to move the title page left or right on the page
+		{\Huge\bfseries \myTitle{}\\[0.5\baselineskip] }\\[2\baselineskip] % Title
+		{\large\textit{\myDateUpdated{}}}\\[4\baselineskip] % Subtitle or further description
+		{\Large\textsc{\myAuthor{}}} % Author name, lower case for consistent small caps
+		\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+		{\noindent \mySubtitleNotes{}}\\[\baselineskip] % Publisher and logo
+	}
+\end{titlepage}
+
+% Additional pages here if needed
+
+\end{document}

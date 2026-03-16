@@ -196,8 +196,7 @@ def main(argv=None):
             'author': "", # Author of individual post. 'rss_author' if none
             'url': "", # URL of individual post
             'uuid': "", # UUID of individual post
-            'description': "", # Description of individual post
-            'title': "", # Title of individual post
+            'description': "" # Description of individual post
 
             }
     # ------------------------------------------------------------------------

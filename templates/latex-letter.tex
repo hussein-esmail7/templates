@@ -1,0 +1,110 @@
+% [FILENAME]
+% Author: [AUTHOR]
+% Created: [DATE]
+% Updated: [DATE]
+% Description: [DESCRIPTION]
+
+% This part is used for https://github.com/hussein-esmail7/template-maker
+% templateDescription: 10 - LaTeX Letter Template
+
+% This file can be found at https://github.com/hussein-esmail7/templates
+
+% =========================== Variables ===========================
+\def\myAuthor			{[AUTHOR]} % Author of this file
+\def\mySubject			{PDF Subject Here}  % Used for Metadata
+\def\myKeywords			{PDF Keywords Here} % Separated by comma
+\def\myDateUpdated		{\today}
+\def\myTitle			{[FILE FRONT]}
+% =========================== Variables ===========================
+
+% =========================== Shortcuts ===========================
+\def\bg{backgroundcolor}
+\def\ra{\rightarrow}
+\def\len{\setlength}
+\newenvironment{itemize*}{\begin{itemize}[wide, nosep, topsep=5px, leftmargin=30pt, labelsep=5pt, parskip=0pt, itemsep=0pt]}{\end{itemize}}
+\newenvironment{enumerate*}{\begin{enumerate}[itemsep=0pt, parskip=0pt]}{\end{enumerate}}
+\newenvironment{enumalph*}{\begin{enumerate}[itemsep=0pt, parskip=0pt, label=\alph*.]}{\end{enumerate}}
+\newenvironment{enumq*}{\begin{enumerate}[itemsep=0pt, parskip=0pt, label=Q{{\arabic*}}.]}{\end{enumerate}}
+% \newcommand{\TODO}[1]{\todo[inline, \bg=lightgray, linecolor=red]{#1}}
+% =========================== Shortcuts ===========================
+
+\documentclass[12pt]{letter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fouriernc}
+
+% \usepackage[colorinlistoftodos]{todonotes}	% Used for "to do" notes
+\usepackage[margin=1in]{geometry} % 1-inch margins
+% \usepackage{amssymb}	% Used for math symbols
+\usepackage{comment}	% Used for the 'comment' environment (multi-line)
+% \usepackage{datetime}
+% \usepackage{enumitem}	% Used for enumalpha environment
+% \usepackage{float}		% Used for ``H'' flag in figure environment
+% \usepackage{graphicx}   % Used for adding images
+% \usepackage{longtable}	% Used to format longtables properly
+% \usepackage{multirow}
+% \usepackage{hanging}
+% \usepackage{xcolor}
+
+% \usepackage{npage}			% Used locally
+
+% \graphicspath{{./}}     % Import images in the same folder as this .tex file
+
+\usepackage[pdfusetitle]{hyperref}   % Used for adding PDF metadata
+\hypersetup{
+    colorlinks=true,
+	urlcolor=black,		% URL colors (\href{}{}). Changed to blue later
+	linkcolor=black,	% Table of Contents text color. Used for TOC body only
+    pdfborder={0 0 0},
+    pdfsubject={\mySubject},
+    pdfkeywords={\myKeywords}
+}
+
+\title{\myTitle}
+\author{\myAuthor}
+% \newdateformat{specialdate}{\THEYEAR\ \twodigit{\THEMONTH}\ \twodigit{\THEDAY}\ (\shortdayofweekname{\THEDAY}{\THEMONTH}{\THEYEAR})}
+% \date{\specialdate\today}
+% \date{\specialdate\today}
+
+\begin{document}        % Official beginning of the document.
+\date{\raggedright\today} % Left-aligned date of the letter
+% \hypersetup{linkcolor=blue} % Any links to other sections are now blue
+% \pagenumbering{gobble}
+% \flushleft
+% \hangpara{3em}{1} % Indent paragraphs how I do on paper
+
+% To
+\begin{letter}{
+	NAME \\
+	ROLE \\
+	ORGANIZATION \\
+	STREET NUM AND NAME \\
+	CITY, PROVINCE, POSTAL CODE
+}
+
+% From
+\begin{center}
+	[AUTHOR] \\
+	STREET NUM AND NAME \\
+	CITY, PROVINCE, POSTAL CODE \\
+	EMAIL, PHONE
+\end{center}
+
+\vspace{1cm} % Vertical whitespace
+
+\signature{[AUTHOR]} % Your name for the signature at the bottom
+
+% Content
+
+\opening{Dear NAME,}
+
+% TODO: PARAGRAPHS HERE
+
+\closing{Sincerely,}
+
+% \encl{Curriculum vitae, employment form} % List your enclosed documents here, comment this line for no enclosures
+
+\end{letter}
+
+\end{document}

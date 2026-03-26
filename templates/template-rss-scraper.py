@@ -190,15 +190,14 @@ def main(argv=None):
     #       entry), remember to put in a check if it is in the file by UUID
     #       before going to that page. Something that can be generated/checked
     #       by just the table of contents/main list page of URLs.
-    entries.append{
+    entries.append({
             'title': "", # Title of individual post
             'date': "", # Date of individual post
             'author': "", # Author of individual post. 'rss_author' if none
             'url': "", # URL of individual post
             'uuid': "", # UUID of individual post
             'description': "" # Description of individual post
-
-            }
+            })
     # ------------------------------------------------------------------------
 
     # ------------------------------------------------------------------------
